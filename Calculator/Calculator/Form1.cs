@@ -71,5 +71,71 @@ namespace Calculator
         {
             bx_output.Text = bx_output.Text + "9";
         }
+
+        private void btn_dot_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + ".";
+        }
+
+        private void oper_plus_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "+";
+        }
+
+        private void oper_minus_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "-";
+        }
+
+        private void oper_times_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "*";
+        }
+
+        private void oper_divide_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "/";
+        }
+
+        private void oper_equals_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "=";
+        }
+
+        private void symbol_percent_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "%";
+        }
+
+        private void oper_reciprocal_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "/x";
+        }
+
+        private void oper_sqrt_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "√";
+        }
+
+        private void btn_pos_neg_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "-";
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "-";
+#editPa
+        }
+
+        private void btn_del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_all_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
