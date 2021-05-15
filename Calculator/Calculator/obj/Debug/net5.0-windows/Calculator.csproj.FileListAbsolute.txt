@@ -16,3 +16,13 @@ C:\Users\USER\source\repos\Calculator\Calculator\obj\Debug\net5.0-windows\Calcul
 C:\Users\USER\source\repos\Calculator\Calculator\obj\Debug\net5.0-windows\ref\Calculator.dll
 C:\Users\USER\source\repos\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.pdb
 C:\Users\USER\source\repos\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.genruntimeconfig.cache
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.csprojAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.Form1.resources
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.AssemblyInfo.cs
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.dll
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\ref\Calculator.dll
+C:\Users\USER\Documents\GitHub\Calculator\Calculator\Calculator\obj\Debug\net5.0-windows\Calculator.pdb

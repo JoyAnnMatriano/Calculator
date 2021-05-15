@@ -1,7 +1,7 @@
 ﻿
 namespace Calculator
 {
-    partial class Form1
+    partial class Calculator_box
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,7 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator_box));
             this.btn_0 = new System.Windows.Forms.Button();
             this.bx_output = new System.Windows.Forms.TextBox();
             this.btn_1 = new System.Windows.Forms.Button();
@@ -339,7 +340,7 @@ namespace Calculator
             this.btn_del.Visible = false;
             this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
-            // Form1
+            // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -368,9 +369,12 @@ namespace Calculator
             this.Controls.Add(this.btn_1);
             this.Controls.Add(this.bx_output);
             this.Controls.Add(this.btn_0);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
+            this.Name = "Calculator_box";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
