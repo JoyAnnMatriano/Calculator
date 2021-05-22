@@ -31,7 +31,6 @@ namespace Calculator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator_box));
             this.btn_0 = new System.Windows.Forms.Button();
-            this.bx_output = new System.Windows.Forms.TextBox();
             this.btn_1 = new System.Windows.Forms.Button();
             this.btn_2 = new System.Windows.Forms.Button();
             this.btn_3 = new System.Windows.Forms.Button();
@@ -54,11 +53,12 @@ namespace Calculator
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_clear_all = new System.Windows.Forms.Button();
             this.btn_del = new System.Windows.Forms.Button();
+            this.bx_output = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_0
             // 
-            this.btn_0.Location = new System.Drawing.Point(22, 403);
+            this.btn_0.Location = new System.Drawing.Point(22, 353);
             this.btn_0.Name = "btn_0";
             this.btn_0.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_0.Size = new System.Drawing.Size(106, 48);
@@ -67,19 +67,9 @@ namespace Calculator
             this.btn_0.UseVisualStyleBackColor = true;
             this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
             // 
-            // bx_output
-            // 
-            this.bx_output.Location = new System.Drawing.Point(22, 46);
-            this.bx_output.Name = "bx_output";
-            this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bx_output.Size = new System.Drawing.Size(301, 23);
-            this.bx_output.TabIndex = 1;
-            this.bx_output.TabStop = false;
-            this.bx_output.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // btn_1
             // 
-            this.btn_1.Location = new System.Drawing.Point(22, 352);
+            this.btn_1.Location = new System.Drawing.Point(22, 305);
             this.btn_1.Name = "btn_1";
             this.btn_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_1.Size = new System.Drawing.Size(49, 45);
@@ -90,7 +80,7 @@ namespace Calculator
             // 
             // btn_2
             // 
-            this.btn_2.Location = new System.Drawing.Point(79, 352);
+            this.btn_2.Location = new System.Drawing.Point(79, 305);
             this.btn_2.Name = "btn_2";
             this.btn_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_2.Size = new System.Drawing.Size(49, 45);
@@ -101,7 +91,7 @@ namespace Calculator
             // 
             // btn_3
             // 
-            this.btn_3.Location = new System.Drawing.Point(134, 352);
+            this.btn_3.Location = new System.Drawing.Point(134, 305);
             this.btn_3.Name = "btn_3";
             this.btn_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_3.Size = new System.Drawing.Size(49, 45);
@@ -112,7 +102,7 @@ namespace Calculator
             // 
             // btn_4
             // 
-            this.btn_4.Location = new System.Drawing.Point(22, 301);
+            this.btn_4.Location = new System.Drawing.Point(22, 254);
             this.btn_4.Name = "btn_4";
             this.btn_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_4.Size = new System.Drawing.Size(49, 45);
@@ -123,7 +113,7 @@ namespace Calculator
             // 
             // btn_5
             // 
-            this.btn_5.Location = new System.Drawing.Point(79, 301);
+            this.btn_5.Location = new System.Drawing.Point(79, 254);
             this.btn_5.Name = "btn_5";
             this.btn_5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_5.Size = new System.Drawing.Size(49, 45);
@@ -134,7 +124,7 @@ namespace Calculator
             // 
             // btn_6
             // 
-            this.btn_6.Location = new System.Drawing.Point(134, 301);
+            this.btn_6.Location = new System.Drawing.Point(134, 254);
             this.btn_6.Name = "btn_6";
             this.btn_6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_6.Size = new System.Drawing.Size(49, 45);
@@ -145,7 +135,7 @@ namespace Calculator
             // 
             // btn_7
             // 
-            this.btn_7.Location = new System.Drawing.Point(22, 250);
+            this.btn_7.Location = new System.Drawing.Point(24, 203);
             this.btn_7.Name = "btn_7";
             this.btn_7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_7.Size = new System.Drawing.Size(49, 45);
@@ -156,7 +146,7 @@ namespace Calculator
             // 
             // btn_8
             // 
-            this.btn_8.Location = new System.Drawing.Point(79, 250);
+            this.btn_8.Location = new System.Drawing.Point(79, 203);
             this.btn_8.Name = "btn_8";
             this.btn_8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_8.Size = new System.Drawing.Size(49, 45);
@@ -167,7 +157,7 @@ namespace Calculator
             // 
             // btn_9
             // 
-            this.btn_9.Location = new System.Drawing.Point(134, 250);
+            this.btn_9.Location = new System.Drawing.Point(134, 203);
             this.btn_9.Name = "btn_9";
             this.btn_9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_9.Size = new System.Drawing.Size(49, 45);
@@ -178,7 +168,7 @@ namespace Calculator
             // 
             // btn_dot
             // 
-            this.btn_dot.Location = new System.Drawing.Point(134, 403);
+            this.btn_dot.Location = new System.Drawing.Point(134, 353);
             this.btn_dot.Name = "btn_dot";
             this.btn_dot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_dot.Size = new System.Drawing.Size(49, 45);
@@ -189,7 +179,7 @@ namespace Calculator
             // 
             // oper_plus
             // 
-            this.oper_plus.Location = new System.Drawing.Point(189, 403);
+            this.oper_plus.Location = new System.Drawing.Point(189, 353);
             this.oper_plus.Name = "oper_plus";
             this.oper_plus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_plus.Size = new System.Drawing.Size(49, 45);
@@ -200,7 +190,7 @@ namespace Calculator
             // 
             // oper_minus
             // 
-            this.oper_minus.Location = new System.Drawing.Point(189, 352);
+            this.oper_minus.Location = new System.Drawing.Point(189, 305);
             this.oper_minus.Name = "oper_minus";
             this.oper_minus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_minus.Size = new System.Drawing.Size(49, 45);
@@ -211,7 +201,7 @@ namespace Calculator
             // 
             // oper_times
             // 
-            this.oper_times.Location = new System.Drawing.Point(189, 301);
+            this.oper_times.Location = new System.Drawing.Point(189, 254);
             this.oper_times.Name = "oper_times";
             this.oper_times.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_times.Size = new System.Drawing.Size(49, 45);
@@ -222,7 +212,7 @@ namespace Calculator
             // 
             // oper_divide
             // 
-            this.oper_divide.Location = new System.Drawing.Point(189, 250);
+            this.oper_divide.Location = new System.Drawing.Point(189, 203);
             this.oper_divide.Name = "oper_divide";
             this.oper_divide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_divide.Size = new System.Drawing.Size(49, 45);
@@ -233,7 +223,7 @@ namespace Calculator
             // 
             // oper_equals
             // 
-            this.oper_equals.Location = new System.Drawing.Point(244, 352);
+            this.oper_equals.Location = new System.Drawing.Point(244, 305);
             this.oper_equals.Name = "oper_equals";
             this.oper_equals.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_equals.Size = new System.Drawing.Size(49, 96);
@@ -244,7 +234,7 @@ namespace Calculator
             // 
             // oper_reciprocal
             // 
-            this.oper_reciprocal.Location = new System.Drawing.Point(244, 301);
+            this.oper_reciprocal.Location = new System.Drawing.Point(244, 254);
             this.oper_reciprocal.Name = "oper_reciprocal";
             this.oper_reciprocal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_reciprocal.Size = new System.Drawing.Size(49, 45);
@@ -258,7 +248,7 @@ namespace Calculator
             // 
             // symbol_percent
             // 
-            this.symbol_percent.Location = new System.Drawing.Point(244, 250);
+            this.symbol_percent.Location = new System.Drawing.Point(244, 203);
             this.symbol_percent.Name = "symbol_percent";
             this.symbol_percent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.symbol_percent.Size = new System.Drawing.Size(49, 45);
@@ -272,7 +262,7 @@ namespace Calculator
             // 
             // oper_sqrt
             // 
-            this.oper_sqrt.Location = new System.Drawing.Point(244, 199);
+            this.oper_sqrt.Location = new System.Drawing.Point(244, 152);
             this.oper_sqrt.Name = "oper_sqrt";
             this.oper_sqrt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_sqrt.Size = new System.Drawing.Size(49, 45);
@@ -286,7 +276,7 @@ namespace Calculator
             // 
             // btn_pos_neg
             // 
-            this.btn_pos_neg.Location = new System.Drawing.Point(189, 199);
+            this.btn_pos_neg.Location = new System.Drawing.Point(189, 152);
             this.btn_pos_neg.Name = "btn_pos_neg";
             this.btn_pos_neg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_pos_neg.Size = new System.Drawing.Size(49, 45);
@@ -300,7 +290,7 @@ namespace Calculator
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(134, 199);
+            this.btn_cancel.Location = new System.Drawing.Point(134, 152);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_cancel.Size = new System.Drawing.Size(49, 45);
@@ -314,7 +304,7 @@ namespace Calculator
             // 
             // btn_clear_all
             // 
-            this.btn_clear_all.Location = new System.Drawing.Point(79, 199);
+            this.btn_clear_all.Location = new System.Drawing.Point(79, 152);
             this.btn_clear_all.Name = "btn_clear_all";
             this.btn_clear_all.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_clear_all.Size = new System.Drawing.Size(49, 45);
@@ -328,7 +318,7 @@ namespace Calculator
             // 
             // btn_del
             // 
-            this.btn_del.Location = new System.Drawing.Point(22, 199);
+            this.btn_del.Location = new System.Drawing.Point(24, 152);
             this.btn_del.Name = "btn_del";
             this.btn_del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_del.Size = new System.Drawing.Size(49, 45);
@@ -340,11 +330,24 @@ namespace Calculator
             this.btn_del.Visible = false;
             this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
+            // bx_output
+            // 
+            this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bx_output.Location = new System.Drawing.Point(22, 43);
+            this.bx_output.Multiline = true;
+            this.bx_output.Name = "bx_output";
+            this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bx_output.Size = new System.Drawing.Size(271, 62);
+            this.bx_output.TabIndex = 1;
+            this.bx_output.TabStop = false;
+            this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bx_output.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 472);
+            this.ClientSize = new System.Drawing.Size(320, 424);
             this.Controls.Add(this.btn_del);
             this.Controls.Add(this.btn_clear_all);
             this.Controls.Add(this.btn_cancel);
@@ -383,7 +386,6 @@ namespace Calculator
         #endregion
 
         private System.Windows.Forms.Button btn_0;
-        private System.Windows.Forms.TextBox bx_output;
         private System.Windows.Forms.Button btn_1;
         private System.Windows.Forms.Button btn_2;
         private System.Windows.Forms.Button btn_3;
@@ -406,6 +408,7 @@ namespace Calculator
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_clear_all;
         private System.Windows.Forms.Button btn_del;
+        private System.Windows.Forms.TextBox bx_output;
     }
 }
 
