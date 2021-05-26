@@ -65,7 +65,7 @@ namespace Calculator
             this.btn_0.TabIndex = 0;
             this.btn_0.Text = "0";
             this.btn_0.UseVisualStyleBackColor = true;
-            this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
+            this.btn_0.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_1
             // 
@@ -76,7 +76,7 @@ namespace Calculator
             this.btn_1.TabIndex = 2;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = true;
-            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
+            this.btn_1.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_2
             // 
@@ -87,7 +87,7 @@ namespace Calculator
             this.btn_2.TabIndex = 3;
             this.btn_2.Text = "2";
             this.btn_2.UseVisualStyleBackColor = true;
-            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
+            this.btn_2.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_3
             // 
@@ -98,7 +98,7 @@ namespace Calculator
             this.btn_3.TabIndex = 4;
             this.btn_3.Text = "3";
             this.btn_3.UseVisualStyleBackColor = true;
-            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
+            this.btn_3.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_4
             // 
@@ -109,7 +109,7 @@ namespace Calculator
             this.btn_4.TabIndex = 5;
             this.btn_4.Text = "4";
             this.btn_4.UseVisualStyleBackColor = true;
-            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
+            this.btn_4.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_5
             // 
@@ -120,7 +120,7 @@ namespace Calculator
             this.btn_5.TabIndex = 6;
             this.btn_5.Text = "5";
             this.btn_5.UseVisualStyleBackColor = true;
-            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
+            this.btn_5.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_6
             // 
@@ -131,7 +131,7 @@ namespace Calculator
             this.btn_6.TabIndex = 7;
             this.btn_6.Text = "6";
             this.btn_6.UseVisualStyleBackColor = true;
-            this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
+            this.btn_6.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_7
             // 
@@ -142,7 +142,7 @@ namespace Calculator
             this.btn_7.TabIndex = 8;
             this.btn_7.Text = "7";
             this.btn_7.UseVisualStyleBackColor = true;
-            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
+            this.btn_7.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_8
             // 
@@ -153,7 +153,7 @@ namespace Calculator
             this.btn_8.TabIndex = 9;
             this.btn_8.Text = "8";
             this.btn_8.UseVisualStyleBackColor = true;
-            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
+            this.btn_8.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_9
             // 
@@ -164,7 +164,7 @@ namespace Calculator
             this.btn_9.TabIndex = 10;
             this.btn_9.Text = "9";
             this.btn_9.UseVisualStyleBackColor = true;
-            this.btn_9.Click += new System.EventHandler(this.btn_9_Click);
+            this.btn_9.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_dot
             // 
@@ -175,7 +175,7 @@ namespace Calculator
             this.btn_dot.TabIndex = 11;
             this.btn_dot.Text = ".";
             this.btn_dot.UseVisualStyleBackColor = true;
-            this.btn_dot.Click += new System.EventHandler(this.btn_dot_Click);
+            this.btn_dot.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // oper_plus
             // 

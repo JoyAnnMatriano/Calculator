@@ -26,57 +26,6 @@ namespace Calculator
         {
 
         }
-
-        private void btn_1_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "1";
-        }
-
-        private void btn_2_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "2";
-        }
-
-        private void btn_3_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "3";
-        }
-
-        private void btn_4_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "4";
-        }
-
-        private void btn_5_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "5";
-        }
-
-        private void btn_6_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "6";
-        }
-
-        private void btn_7_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "7";
-        }
-
-        private void btn_8_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "8";
-        }
-
-        private void btn_9_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "9";
-        }
-
-        private void btn_dot_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + ".";
-        }
-
         private void oper_plus_Click(object sender, EventArgs e)
         {
             bx_output.Text = bx_output.Text + "+";
@@ -125,7 +74,6 @@ namespace Calculator
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             bx_output.Text = bx_output.Text + "-";
-#editPa
         }
 
         private void btn_del_Click(object sender, EventArgs e)
@@ -141,6 +89,12 @@ namespace Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_num_Click(object sender, EventArgs e)
+        {
+            Button btn_num = (Button)sender;
+            bx_output.Text = bx_output.Text + btn_num.Text;
         }
     }
 }
