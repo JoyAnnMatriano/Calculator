@@ -336,12 +336,12 @@ namespace Calculator
             this.bx_output.Location = new System.Drawing.Point(22, 43);
             this.bx_output.Multiline = true;
             this.bx_output.Name = "bx_output";
-            this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bx_output.Size = new System.Drawing.Size(271, 62);
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bx_output.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.bx_output.TextChanged += new System.EventHandler(this.btn_num_click);
             // 
             // Calculator_box
             // 

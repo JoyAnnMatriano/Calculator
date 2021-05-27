@@ -21,11 +21,6 @@ namespace Calculator
         {
             bx_output.Text = bx_output.Text + "0";
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void oper_plus_Click(object sender, EventArgs e)
         {
             bx_output.Text = bx_output.Text + "+";
@@ -93,8 +88,21 @@ namespace Calculator
 
         private void btn_num_Click(object sender, EventArgs e)
         {
+
+            if (bx_output.Text == "0")
+                bx_output.Clear();
+
+
             Button btn_num = (Button)sender;
             bx_output.Text = bx_output.Text + btn_num.Text;
+
+
+        
+        }
+
+        private void btn_num_click(object sender, EventArgs e)
+        {
+
         }
     }
 }
