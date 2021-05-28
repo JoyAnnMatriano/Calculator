@@ -104,5 +104,12 @@ namespace Calculator
         {
 
         }
+
+        private void oper_click(object sender, EventArgs e)
+        {
+            Button b_Oper = (Button)sender;
+            operation = b_Oper.Text;
+            value = Double.Parse(bx_output.Text);
+        }
     }
 }

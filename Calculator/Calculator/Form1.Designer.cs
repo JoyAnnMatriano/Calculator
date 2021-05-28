@@ -186,7 +186,7 @@ namespace Calculator
             this.oper_plus.TabIndex = 12;
             this.oper_plus.Text = "+";
             this.oper_plus.UseVisualStyleBackColor = true;
-            this.oper_plus.Click += new System.EventHandler(this.oper_plus_Click);
+            this.oper_plus.Click += new System.EventHandler(this.oper_plus);
             // 
             // oper_minus
             // 
