@@ -186,7 +186,6 @@ namespace Calculator
             this.oper_plus.TabIndex = 12;
             this.oper_plus.Text = "+";
             this.oper_plus.UseVisualStyleBackColor = true;
-            this.oper_plus.Click += new System.EventHandler(this.oper_plus);
             // 
             // oper_minus
             // 
@@ -230,7 +229,7 @@ namespace Calculator
             this.oper_equals.TabIndex = 16;
             this.oper_equals.Text = "=";
             this.oper_equals.UseVisualStyleBackColor = true;
-            this.oper_equals.Click += new System.EventHandler(this.oper_equals_Click);
+            this.oper_equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // oper_reciprocal
             // 
