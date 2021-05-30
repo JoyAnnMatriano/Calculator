@@ -196,7 +196,6 @@ namespace Calculator
             this.oper_minus.TabIndex = 13;
             this.oper_minus.Text = "-";
             this.oper_minus.UseVisualStyleBackColor = true;
-            this.oper_minus.Click += new System.EventHandler(this.oper_minus_Click);
             // 
             // oper_times
             // 
@@ -207,7 +206,6 @@ namespace Calculator
             this.oper_times.TabIndex = 14;
             this.oper_times.Text = "*";
             this.oper_times.UseVisualStyleBackColor = true;
-            this.oper_times.Click += new System.EventHandler(this.oper_times_Click);
             // 
             // oper_divide
             // 
@@ -218,7 +216,6 @@ namespace Calculator
             this.oper_divide.TabIndex = 15;
             this.oper_divide.Text = "/";
             this.oper_divide.UseVisualStyleBackColor = true;
-            this.oper_divide.Click += new System.EventHandler(this.oper_divide_Click);
             // 
             // oper_equals
             // 

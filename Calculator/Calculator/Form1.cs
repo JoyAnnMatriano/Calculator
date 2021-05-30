@@ -65,7 +65,7 @@ namespace Calculator
         private void btn_num_Click(object sender, EventArgs e)
         {
 
-            if (bx_output.Text == "0")
+            if ((bx_output.Text == "0") || (isOperationExecuted) )
                 bx_output.Clear();
 
             isOperationExecuted = false;
@@ -86,6 +86,7 @@ namespace Calculator
             Button b_Oper = (Button)sender;
             operationExecuted = b_Oper.Text;
             resultValue = Double.Parse(bx_output.Text);
+            bx_output.Text = resultValue + " " + operationExecuted;
             isOperationExecuted = true;
         }
 
