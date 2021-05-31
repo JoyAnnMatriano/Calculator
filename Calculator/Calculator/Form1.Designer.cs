@@ -58,123 +58,134 @@ namespace Calculator
             // 
             // btn_0
             // 
+            this.btn_0.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_0.Location = new System.Drawing.Point(22, 353);
             this.btn_0.Name = "btn_0";
             this.btn_0.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_0.Size = new System.Drawing.Size(106, 48);
             this.btn_0.TabIndex = 0;
             this.btn_0.Text = "0";
-            this.btn_0.UseVisualStyleBackColor = true;
+            this.btn_0.UseVisualStyleBackColor = false;
             this.btn_0.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_1
             // 
+            this.btn_1.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_1.Location = new System.Drawing.Point(22, 305);
             this.btn_1.Name = "btn_1";
             this.btn_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_1.Size = new System.Drawing.Size(49, 45);
             this.btn_1.TabIndex = 2;
             this.btn_1.Text = "1";
-            this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.UseVisualStyleBackColor = false;
             this.btn_1.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_2
             // 
+            this.btn_2.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_2.Location = new System.Drawing.Point(79, 305);
             this.btn_2.Name = "btn_2";
             this.btn_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_2.Size = new System.Drawing.Size(49, 45);
             this.btn_2.TabIndex = 3;
             this.btn_2.Text = "2";
-            this.btn_2.UseVisualStyleBackColor = true;
+            this.btn_2.UseVisualStyleBackColor = false;
             this.btn_2.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_3
             // 
+            this.btn_3.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_3.Location = new System.Drawing.Point(134, 305);
             this.btn_3.Name = "btn_3";
             this.btn_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_3.Size = new System.Drawing.Size(49, 45);
             this.btn_3.TabIndex = 4;
             this.btn_3.Text = "3";
-            this.btn_3.UseVisualStyleBackColor = true;
+            this.btn_3.UseVisualStyleBackColor = false;
             this.btn_3.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_4
             // 
+            this.btn_4.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_4.Location = new System.Drawing.Point(22, 254);
             this.btn_4.Name = "btn_4";
             this.btn_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_4.Size = new System.Drawing.Size(49, 45);
             this.btn_4.TabIndex = 5;
             this.btn_4.Text = "4";
-            this.btn_4.UseVisualStyleBackColor = true;
+            this.btn_4.UseVisualStyleBackColor = false;
             this.btn_4.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_5
             // 
+            this.btn_5.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_5.Location = new System.Drawing.Point(79, 254);
             this.btn_5.Name = "btn_5";
             this.btn_5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_5.Size = new System.Drawing.Size(49, 45);
             this.btn_5.TabIndex = 6;
             this.btn_5.Text = "5";
-            this.btn_5.UseVisualStyleBackColor = true;
+            this.btn_5.UseVisualStyleBackColor = false;
             this.btn_5.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_6
             // 
+            this.btn_6.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_6.Location = new System.Drawing.Point(134, 254);
             this.btn_6.Name = "btn_6";
             this.btn_6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_6.Size = new System.Drawing.Size(49, 45);
             this.btn_6.TabIndex = 7;
             this.btn_6.Text = "6";
-            this.btn_6.UseVisualStyleBackColor = true;
+            this.btn_6.UseVisualStyleBackColor = false;
             this.btn_6.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_7
             // 
+            this.btn_7.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_7.Location = new System.Drawing.Point(24, 203);
             this.btn_7.Name = "btn_7";
             this.btn_7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_7.Size = new System.Drawing.Size(49, 45);
             this.btn_7.TabIndex = 8;
             this.btn_7.Text = "7";
-            this.btn_7.UseVisualStyleBackColor = true;
+            this.btn_7.UseVisualStyleBackColor = false;
             this.btn_7.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_8
             // 
+            this.btn_8.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_8.Location = new System.Drawing.Point(79, 203);
             this.btn_8.Name = "btn_8";
             this.btn_8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_8.Size = new System.Drawing.Size(49, 45);
             this.btn_8.TabIndex = 9;
             this.btn_8.Text = "8";
-            this.btn_8.UseVisualStyleBackColor = true;
+            this.btn_8.UseVisualStyleBackColor = false;
             this.btn_8.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_9
             // 
+            this.btn_9.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_9.Location = new System.Drawing.Point(134, 203);
             this.btn_9.Name = "btn_9";
             this.btn_9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_9.Size = new System.Drawing.Size(49, 45);
             this.btn_9.TabIndex = 10;
             this.btn_9.Text = "9";
-            this.btn_9.UseVisualStyleBackColor = true;
+            this.btn_9.UseVisualStyleBackColor = false;
             this.btn_9.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // btn_dot
             // 
+            this.btn_dot.BackColor = System.Drawing.Color.LavenderBlush;
             this.btn_dot.Location = new System.Drawing.Point(134, 353);
             this.btn_dot.Name = "btn_dot";
             this.btn_dot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_dot.Size = new System.Drawing.Size(49, 45);
             this.btn_dot.TabIndex = 11;
             this.btn_dot.Text = ".";
-            this.btn_dot.UseVisualStyleBackColor = true;
+            this.btn_dot.UseVisualStyleBackColor = false;
             this.btn_dot.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // oper_plus
