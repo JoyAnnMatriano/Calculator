@@ -348,7 +348,6 @@ namespace Calculator
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bx_output.TextChanged += new System.EventHandler(this.btn_num_click);
             // 
             // Calculator_box
             // 

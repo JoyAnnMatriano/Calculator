@@ -70,15 +70,16 @@ namespace Calculator
 
             isOperationExecuted = false;
             Button btn_num = (Button)sender;
+            if (btn_num.Text == ".")
+            {
+                if (bx_output.Text.Contains("."))
+                    bx_output.Text = bx_output.Text + btn_num.Text;
+            }else
+
             bx_output.Text = bx_output.Text + btn_num.Text;
 
 
         
-        }
-
-        private void btn_num_click(object sender, EventArgs e)
-        {
-
         }
 
         private void oper_click(object sender, EventArgs e)
