@@ -251,7 +251,6 @@ namespace Calculator
             this.oper_reciprocal.UseVisualStyleBackColor = true;
             this.oper_reciprocal.UseWaitCursor = true;
             this.oper_reciprocal.Visible = false;
-            this.oper_reciprocal.Click += new System.EventHandler(this.oper_reciprocal_Click);
             // 
             // symbol_percent
             // 
@@ -265,7 +264,6 @@ namespace Calculator
             this.symbol_percent.UseVisualStyleBackColor = true;
             this.symbol_percent.UseWaitCursor = true;
             this.symbol_percent.Visible = false;
-            this.symbol_percent.Click += new System.EventHandler(this.symbol_percent_Click);
             // 
             // oper_sqrt
             // 
@@ -279,7 +277,6 @@ namespace Calculator
             this.oper_sqrt.UseVisualStyleBackColor = true;
             this.oper_sqrt.UseWaitCursor = true;
             this.oper_sqrt.Visible = false;
-            this.oper_sqrt.Click += new System.EventHandler(this.oper_sqrt_Click);
             // 
             // btn_pos_neg
             // 
@@ -293,7 +290,6 @@ namespace Calculator
             this.btn_pos_neg.UseVisualStyleBackColor = true;
             this.btn_pos_neg.UseWaitCursor = true;
             this.btn_pos_neg.Visible = false;
-            this.btn_pos_neg.Click += new System.EventHandler(this.btn_pos_neg_Click);
             // 
             // btn_cancel
             // 

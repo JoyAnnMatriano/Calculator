@@ -20,8 +20,6 @@ namespace Calculator
         {
             InitializeComponent();
         }
-
-
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
@@ -30,7 +28,13 @@ namespace Calculator
 
         private void btn_del_Click(object sender, EventArgs e)
         {
-
+            string zero = "0";
+            if (bx_output.Text.Length > 1)
+            {
+                zero = bx_output.Text;
+                zero = zero.Substring(0, zero.Length - 1);
+            }
+            bx_output.Text = zero;
         }
 
         private void btn_clear_all_Click(object sender, EventArgs e)
@@ -60,9 +64,6 @@ namespace Calculator
             }else
 
             bx_output.Text = bx_output.Text + btn_num.Text;
-
-
-        
         }
 
         private void oper_click(object sender, EventArgs e)
