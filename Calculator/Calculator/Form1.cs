@@ -21,25 +21,6 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void symbol_percent_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "%";
-        }
-
-        private void oper_reciprocal_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "/x";
-        }
-
-        private void oper_sqrt_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "√";
-        }
-
-        private void btn_pos_neg_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = bx_output.Text + "-";
-        }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
@@ -73,7 +54,9 @@ namespace Calculator
             if (btn_num.Text == ".")
             {
                 if (bx_output.Text.Contains("."))
-                    bx_output.Text = bx_output.Text + btn_num.Text;
+                {
+                    bx_output.Text = bx_output.Text += btn_num.Text;
+                }
             }else
 
             bx_output.Text = bx_output.Text + btn_num.Text;
