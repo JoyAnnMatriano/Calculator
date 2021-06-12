@@ -98,7 +98,12 @@ namespace Calculator
                 case "*":
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
                     break;
-            }
+            }//end of switch+
+        }
+
+        private void delete(object sender, EventArgs e)
+        {
+
         }
     }
 }
