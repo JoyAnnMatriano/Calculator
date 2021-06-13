@@ -52,8 +52,8 @@ namespace Calculator
             this.btn_pos_neg = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_clear_all = new System.Windows.Forms.Button();
-            this.btn_del = new System.Windows.Forms.Button();
             this.bx_output = new System.Windows.Forms.TextBox();
+            this.del_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -319,20 +319,6 @@ namespace Calculator
             this.btn_clear_all.Visible = false;
             this.btn_clear_all.Click += new System.EventHandler(this.btn_clear_all_Click);
             // 
-            // btn_del
-            // 
-            this.btn_del.Location = new System.Drawing.Point(24, 152);
-            this.btn_del.Name = "btn_del";
-            this.btn_del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_del.Size = new System.Drawing.Size(49, 45);
-            this.btn_del.TabIndex = 23;
-            this.btn_del.Text = "←";
-            this.btn_del.UseCompatibleTextRendering = true;
-            this.btn_del.UseVisualStyleBackColor = true;
-            this.btn_del.UseWaitCursor = true;
-            this.btn_del.Visible = false;
-            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
-            // 
             // bx_output
             // 
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -345,12 +331,22 @@ namespace Calculator
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // del_btn
+            // 
+            this.del_btn.Location = new System.Drawing.Point(22, 152);
+            this.del_btn.Name = "del_btn";
+            this.del_btn.Size = new System.Drawing.Size(49, 45);
+            this.del_btn.TabIndex = 23;
+            this.del_btn.Text = "←";
+            this.del_btn.UseVisualStyleBackColor = true;
+            this.del_btn.Click += new System.EventHandler(this.del_btn_Click);
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 424);
-            this.Controls.Add(this.btn_del);
+            this.Controls.Add(this.del_btn);
             this.Controls.Add(this.btn_clear_all);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_pos_neg);
@@ -409,8 +405,8 @@ namespace Calculator
         private System.Windows.Forms.Button btn_pos_neg;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_clear_all;
-        private System.Windows.Forms.Button btn_del;
         private System.Windows.Forms.TextBox bx_output;
+        private System.Windows.Forms.Button del_btn;
     }
 }
 

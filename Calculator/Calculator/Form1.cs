@@ -26,17 +26,6 @@ namespace Calculator
             resultValue = 0;
         }
 
-        private void btn_del_Click(object sender, EventArgs e)
-        {
-            string zero = "0";
-            if (bx_output.Text.Length > 1)
-            {
-                zero = bx_output.Text;
-                zero = zero.Substring(0, zero.Length - 1);
-            }
-            bx_output.Text = zero;
-        }
-
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
@@ -101,9 +90,15 @@ namespace Calculator
             }//end of switch+
         }
 
-        private void delete(object sender, EventArgs e)
+        private void del_btn_Click(object sender, EventArgs e)
         {
-
+            string zero = "0";
+            if (bx_output.Text.Length > 1)
+            {
+                zero = bx_output.Text;
+                zero = zero.Substring(0, zero.Length - 1);
+            }
+            bx_output.Text = zero;
         }
     }
 }
