@@ -100,5 +100,10 @@ namespace Calculator
             }
             bx_output.Text = zero;
         }
+
+        private void cancelAll_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = "0";
+        }
     }
 }
