@@ -60,7 +60,7 @@ namespace Calculator
             Button b_Oper = (Button)sender;
             operationExecuted = b_Oper.Text;
             resultValue = Double.Parse(bx_output.Text);
-            bx_output.Text = resultValue + " " + operationExecuted;
+            passValue_operation.Text = resultValue + " " + operationExecuted;
             isOperationExecuted = true;
         }
 
@@ -104,6 +104,10 @@ namespace Calculator
         private void cancelAll_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
+        }
+
+        private void btn_pos_neg_Click(object sender, EventArgs e)
+        {
         }
     }
 }

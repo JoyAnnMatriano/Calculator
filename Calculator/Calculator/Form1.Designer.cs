@@ -55,12 +55,13 @@ namespace Calculator
             this.cancelAll_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.passValue_operation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_0
             // 
-            this.btn_0.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_0.Location = new System.Drawing.Point(87, 353);
+            this.btn_0.BackColor = System.Drawing.Color.Transparent;
+            this.btn_0.Location = new System.Drawing.Point(105, 385);
             this.btn_0.Name = "btn_0";
             this.btn_0.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_0.Size = new System.Drawing.Size(74, 59);
@@ -71,8 +72,8 @@ namespace Calculator
             // 
             // btn_1
             // 
-            this.btn_1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_1.Location = new System.Drawing.Point(22, 297);
+            this.btn_1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_1.Location = new System.Drawing.Point(40, 329);
             this.btn_1.Name = "btn_1";
             this.btn_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_1.Size = new System.Drawing.Size(68, 59);
@@ -83,8 +84,8 @@ namespace Calculator
             // 
             // btn_2
             // 
-            this.btn_2.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_2.Location = new System.Drawing.Point(87, 297);
+            this.btn_2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_2.Location = new System.Drawing.Point(105, 329);
             this.btn_2.Name = "btn_2";
             this.btn_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_2.Size = new System.Drawing.Size(74, 59);
@@ -95,8 +96,8 @@ namespace Calculator
             // 
             // btn_3
             // 
-            this.btn_3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_3.Location = new System.Drawing.Point(158, 297);
+            this.btn_3.BackColor = System.Drawing.Color.Transparent;
+            this.btn_3.Location = new System.Drawing.Point(176, 329);
             this.btn_3.Name = "btn_3";
             this.btn_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_3.Size = new System.Drawing.Size(68, 59);
@@ -107,8 +108,8 @@ namespace Calculator
             // 
             // btn_4
             // 
-            this.btn_4.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_4.Location = new System.Drawing.Point(22, 241);
+            this.btn_4.BackColor = System.Drawing.Color.Transparent;
+            this.btn_4.Location = new System.Drawing.Point(40, 273);
             this.btn_4.Name = "btn_4";
             this.btn_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_4.Size = new System.Drawing.Size(68, 59);
@@ -119,8 +120,8 @@ namespace Calculator
             // 
             // btn_5
             // 
-            this.btn_5.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_5.Location = new System.Drawing.Point(87, 241);
+            this.btn_5.BackColor = System.Drawing.Color.Transparent;
+            this.btn_5.Location = new System.Drawing.Point(105, 273);
             this.btn_5.Name = "btn_5";
             this.btn_5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_5.Size = new System.Drawing.Size(74, 59);
@@ -131,8 +132,8 @@ namespace Calculator
             // 
             // btn_6
             // 
-            this.btn_6.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_6.Location = new System.Drawing.Point(158, 241);
+            this.btn_6.BackColor = System.Drawing.Color.Transparent;
+            this.btn_6.Location = new System.Drawing.Point(176, 273);
             this.btn_6.Name = "btn_6";
             this.btn_6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_6.Size = new System.Drawing.Size(68, 59);
@@ -143,8 +144,8 @@ namespace Calculator
             // 
             // btn_7
             // 
-            this.btn_7.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_7.Location = new System.Drawing.Point(22, 186);
+            this.btn_7.BackColor = System.Drawing.Color.Transparent;
+            this.btn_7.Location = new System.Drawing.Point(40, 218);
             this.btn_7.Name = "btn_7";
             this.btn_7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_7.Size = new System.Drawing.Size(68, 59);
@@ -155,8 +156,8 @@ namespace Calculator
             // 
             // btn_8
             // 
-            this.btn_8.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_8.Location = new System.Drawing.Point(87, 186);
+            this.btn_8.BackColor = System.Drawing.Color.Transparent;
+            this.btn_8.Location = new System.Drawing.Point(105, 218);
             this.btn_8.Name = "btn_8";
             this.btn_8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_8.Size = new System.Drawing.Size(74, 59);
@@ -167,8 +168,8 @@ namespace Calculator
             // 
             // btn_9
             // 
-            this.btn_9.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_9.Location = new System.Drawing.Point(158, 186);
+            this.btn_9.BackColor = System.Drawing.Color.Transparent;
+            this.btn_9.Location = new System.Drawing.Point(176, 218);
             this.btn_9.Name = "btn_9";
             this.btn_9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_9.Size = new System.Drawing.Size(68, 59);
@@ -179,8 +180,8 @@ namespace Calculator
             // 
             // btn_dot
             // 
-            this.btn_dot.BackColor = System.Drawing.Color.LavenderBlush;
-            this.btn_dot.Location = new System.Drawing.Point(158, 353);
+            this.btn_dot.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dot.Location = new System.Drawing.Point(176, 385);
             this.btn_dot.Name = "btn_dot";
             this.btn_dot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_dot.Size = new System.Drawing.Size(68, 59);
@@ -191,47 +192,51 @@ namespace Calculator
             // 
             // oper_plus
             // 
-            this.oper_plus.Location = new System.Drawing.Point(225, 297);
+            this.oper_plus.Location = new System.Drawing.Point(243, 329);
             this.oper_plus.Name = "oper_plus";
             this.oper_plus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_plus.Size = new System.Drawing.Size(68, 59);
             this.oper_plus.TabIndex = 12;
             this.oper_plus.Text = "+";
             this.oper_plus.UseVisualStyleBackColor = true;
+            this.oper_plus.Click += new System.EventHandler(this.oper_click);
             // 
             // oper_minus
             // 
-            this.oper_minus.Location = new System.Drawing.Point(225, 241);
+            this.oper_minus.Location = new System.Drawing.Point(243, 273);
             this.oper_minus.Name = "oper_minus";
             this.oper_minus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_minus.Size = new System.Drawing.Size(68, 59);
             this.oper_minus.TabIndex = 13;
             this.oper_minus.Text = "-";
             this.oper_minus.UseVisualStyleBackColor = true;
+            this.oper_minus.Click += new System.EventHandler(this.oper_click);
             // 
             // oper_times
             // 
-            this.oper_times.Location = new System.Drawing.Point(225, 186);
+            this.oper_times.Location = new System.Drawing.Point(243, 218);
             this.oper_times.Name = "oper_times";
             this.oper_times.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_times.Size = new System.Drawing.Size(68, 59);
             this.oper_times.TabIndex = 14;
             this.oper_times.Text = "x";
             this.oper_times.UseVisualStyleBackColor = true;
+            this.oper_times.Click += new System.EventHandler(this.oper_click);
             // 
             // oper_divide
             // 
-            this.oper_divide.Location = new System.Drawing.Point(225, 134);
+            this.oper_divide.Location = new System.Drawing.Point(243, 166);
             this.oper_divide.Name = "oper_divide";
             this.oper_divide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_divide.Size = new System.Drawing.Size(68, 56);
             this.oper_divide.TabIndex = 15;
             this.oper_divide.Text = "/";
             this.oper_divide.UseVisualStyleBackColor = true;
+            this.oper_divide.Click += new System.EventHandler(this.oper_click);
             // 
             // oper_equals
             // 
-            this.oper_equals.Location = new System.Drawing.Point(225, 353);
+            this.oper_equals.Location = new System.Drawing.Point(243, 385);
             this.oper_equals.Name = "oper_equals";
             this.oper_equals.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_equals.Size = new System.Drawing.Size(68, 59);
@@ -242,7 +247,7 @@ namespace Calculator
             // 
             // oper_reciprocal
             // 
-            this.oper_reciprocal.Location = new System.Drawing.Point(22, 134);
+            this.oper_reciprocal.Location = new System.Drawing.Point(40, 166);
             this.oper_reciprocal.Name = "oper_reciprocal";
             this.oper_reciprocal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_reciprocal.Size = new System.Drawing.Size(68, 56);
@@ -255,7 +260,7 @@ namespace Calculator
             // 
             // symbol_percent
             // 
-            this.symbol_percent.Location = new System.Drawing.Point(22, 84);
+            this.symbol_percent.Location = new System.Drawing.Point(40, 116);
             this.symbol_percent.Name = "symbol_percent";
             this.symbol_percent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.symbol_percent.Size = new System.Drawing.Size(68, 53);
@@ -268,7 +273,7 @@ namespace Calculator
             // 
             // oper_sqrt
             // 
-            this.oper_sqrt.Location = new System.Drawing.Point(87, 134);
+            this.oper_sqrt.Location = new System.Drawing.Point(105, 166);
             this.oper_sqrt.Name = "oper_sqrt";
             this.oper_sqrt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_sqrt.Size = new System.Drawing.Size(74, 56);
@@ -281,7 +286,7 @@ namespace Calculator
             // 
             // btn_pos_neg
             // 
-            this.btn_pos_neg.Location = new System.Drawing.Point(22, 353);
+            this.btn_pos_neg.Location = new System.Drawing.Point(40, 385);
             this.btn_pos_neg.Name = "btn_pos_neg";
             this.btn_pos_neg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_pos_neg.Size = new System.Drawing.Size(68, 59);
@@ -291,22 +296,23 @@ namespace Calculator
             this.btn_pos_neg.UseVisualStyleBackColor = true;
             this.btn_pos_neg.UseWaitCursor = true;
             this.btn_pos_neg.Visible = false;
+            this.btn_pos_neg.Click += new System.EventHandler(this.btn_pos_neg_Click);
             // 
             // bx_output
             // 
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bx_output.Location = new System.Drawing.Point(22, 16);
+            this.bx_output.Location = new System.Drawing.Point(40, 61);
             this.bx_output.Multiline = true;
             this.bx_output.Name = "bx_output";
             this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bx_output.Size = new System.Drawing.Size(271, 62);
+            this.bx_output.Size = new System.Drawing.Size(271, 40);
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // del_btn
             // 
-            this.del_btn.Location = new System.Drawing.Point(225, 84);
+            this.del_btn.Location = new System.Drawing.Point(243, 116);
             this.del_btn.Name = "del_btn";
             this.del_btn.Size = new System.Drawing.Size(68, 53);
             this.del_btn.TabIndex = 23;
@@ -316,7 +322,7 @@ namespace Calculator
             // 
             // cancelAll_btn
             // 
-            this.cancelAll_btn.Location = new System.Drawing.Point(158, 84);
+            this.cancelAll_btn.Location = new System.Drawing.Point(176, 116);
             this.cancelAll_btn.Name = "cancelAll_btn";
             this.cancelAll_btn.Size = new System.Drawing.Size(68, 53);
             this.cancelAll_btn.TabIndex = 24;
@@ -326,7 +332,7 @@ namespace Calculator
             // 
             // cancel_btn
             // 
-            this.cancel_btn.Location = new System.Drawing.Point(87, 84);
+            this.cancel_btn.Location = new System.Drawing.Point(105, 116);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.Size = new System.Drawing.Size(74, 53);
             this.cancel_btn.TabIndex = 25;
@@ -335,18 +341,29 @@ namespace Calculator
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(158, 134);
+            this.button1.Location = new System.Drawing.Point(176, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 55);
             this.button1.TabIndex = 26;
             this.button1.Text = "x2 ";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // passValue_operation
+            // 
+            this.passValue_operation.AutoSize = true;
+            this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passValue_operation.Location = new System.Drawing.Point(40, 11);
+            this.passValue_operation.Name = "passValue_operation";
+            this.passValue_operation.Size = new System.Drawing.Size(40, 47);
+            this.passValue_operation.TabIndex = 27;
+            this.passValue_operation.Text = "  ";
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 424);
+            this.ClientSize = new System.Drawing.Size(344, 473);
+            this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.cancelAll_btn);
@@ -410,6 +427,8 @@ namespace Calculator
         private System.Windows.Forms.Button cancelAll_btn;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label passValuewithOep;
+        private System.Windows.Forms.Label passValue_operation;
     }
 }
 
