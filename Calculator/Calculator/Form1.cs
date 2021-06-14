@@ -46,22 +46,29 @@ namespace Calculator
             Button btn_num = (Button)sender;
             if (btn_num.Text == ".")
             {
-                if (bx_output.Text.Contains("."))
-                {
-                    bx_output.Text = bx_output.Text += btn_num.Text;
-                }
+                if (!bx_output.Text.Contains("."))
+                    bx_output.Text = bx_output.Text + btn_num.Text;
             }else
-
             bx_output.Text = bx_output.Text + btn_num.Text;
         }
 
         private void oper_click(object sender, EventArgs e)
         {
             Button b_Oper = (Button)sender;
-            operationExecuted = b_Oper.Text;
-            resultValue = Double.Parse(bx_output.Text);
-            passValue_operation.Text = resultValue + " " + operationExecuted;
-            isOperationExecuted = true;
+            if (resultValue != 0)
+            {
+                equals_btn.PerformClick();
+                operationExecuted = b_Oper.Text;
+                passValue_operation.Text = resultValue + " " + operationExecuted;
+                isOperationExecuted = true;
+            }
+            else
+            {
+                operationExecuted = b_Oper.Text;
+                resultValue = Double.Parse(bx_output.Text);
+                passValue_operation.Text = resultValue + " " + operationExecuted;
+                isOperationExecuted = true;
+            }
         }
 
         private void equals_Click(object sender, EventArgs e)
@@ -88,6 +95,8 @@ namespace Calculator
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
                     break;
             }//end of switch+
+            resultValue = Double.Parse(bx_output.Text);
+            passValue_operation.Text = "";
         }
 
         private void del_btn_Click(object sender, EventArgs e)
@@ -103,11 +112,17 @@ namespace Calculator
 
         private void cancelAll_Click(object sender, EventArgs e)
         {
+            passValue_operation.Text = "0";
             bx_output.Text = "0";
         }
 
         private void btn_pos_neg_Click(object sender, EventArgs e)
         {
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = "0";
         }
     }
 }

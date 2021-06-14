@@ -45,7 +45,6 @@ namespace Calculator
             this.oper_minus = new System.Windows.Forms.Button();
             this.oper_times = new System.Windows.Forms.Button();
             this.oper_divide = new System.Windows.Forms.Button();
-            this.oper_equals = new System.Windows.Forms.Button();
             this.oper_reciprocal = new System.Windows.Forms.Button();
             this.symbol_percent = new System.Windows.Forms.Button();
             this.oper_sqrt = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@ namespace Calculator
             this.cancel_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.passValue_operation = new System.Windows.Forms.Label();
+            this.equals_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -234,17 +234,6 @@ namespace Calculator
             this.oper_divide.UseVisualStyleBackColor = true;
             this.oper_divide.Click += new System.EventHandler(this.oper_click);
             // 
-            // oper_equals
-            // 
-            this.oper_equals.Location = new System.Drawing.Point(243, 385);
-            this.oper_equals.Name = "oper_equals";
-            this.oper_equals.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.oper_equals.Size = new System.Drawing.Size(68, 59);
-            this.oper_equals.TabIndex = 16;
-            this.oper_equals.Text = "=";
-            this.oper_equals.UseVisualStyleBackColor = true;
-            this.oper_equals.Click += new System.EventHandler(this.equals_Click);
-            // 
             // oper_reciprocal
             // 
             this.oper_reciprocal.Location = new System.Drawing.Point(40, 166);
@@ -338,6 +327,7 @@ namespace Calculator
             this.cancel_btn.TabIndex = 25;
             this.cancel_btn.Text = "CE";
             this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // button1
             // 
@@ -351,18 +341,30 @@ namespace Calculator
             // passValue_operation
             // 
             this.passValue_operation.AutoSize = true;
-            this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passValue_operation.Location = new System.Drawing.Point(40, 11);
+            this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passValue_operation.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.passValue_operation.Location = new System.Drawing.Point(40, 21);
             this.passValue_operation.Name = "passValue_operation";
-            this.passValue_operation.Size = new System.Drawing.Size(40, 47);
+            this.passValue_operation.Size = new System.Drawing.Size(31, 37);
             this.passValue_operation.TabIndex = 27;
             this.passValue_operation.Text = "  ";
+            // 
+            // equals_btn
+            // 
+            this.equals_btn.Location = new System.Drawing.Point(243, 385);
+            this.equals_btn.Name = "equals_btn";
+            this.equals_btn.Size = new System.Drawing.Size(68, 58);
+            this.equals_btn.TabIndex = 28;
+            this.equals_btn.Text = "=";
+            this.equals_btn.UseVisualStyleBackColor = true;
+            this.equals_btn.Click += new System.EventHandler(this.equals_Click);
             // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 473);
+            this.Controls.Add(this.equals_btn);
             this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cancel_btn);
@@ -372,7 +374,6 @@ namespace Calculator
             this.Controls.Add(this.oper_sqrt);
             this.Controls.Add(this.symbol_percent);
             this.Controls.Add(this.oper_reciprocal);
-            this.Controls.Add(this.oper_equals);
             this.Controls.Add(this.oper_divide);
             this.Controls.Add(this.oper_times);
             this.Controls.Add(this.oper_minus);
@@ -417,7 +418,6 @@ namespace Calculator
         private System.Windows.Forms.Button oper_minus;
         private System.Windows.Forms.Button oper_times;
         private System.Windows.Forms.Button oper_divide;
-        private System.Windows.Forms.Button oper_equals;
         private System.Windows.Forms.Button oper_reciprocal;
         private System.Windows.Forms.Button symbol_percent;
         private System.Windows.Forms.Button oper_sqrt;
@@ -429,6 +429,8 @@ namespace Calculator
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label passValuewithOep;
         private System.Windows.Forms.Label passValue_operation;
+        private System.Windows.Forms.Button equals;
+        private System.Windows.Forms.Button equals_btn;
     }
 }
 
