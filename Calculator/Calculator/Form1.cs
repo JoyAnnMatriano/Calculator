@@ -116,13 +116,14 @@ namespace Calculator
             bx_output.Text = "0";
         }
 
-        private void btn_pos_neg_Click(object sender, EventArgs e)
-        {
-        }
-
         private void cancel_btn_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
+        }
+
+        private void posneg_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
         }
     }
 }

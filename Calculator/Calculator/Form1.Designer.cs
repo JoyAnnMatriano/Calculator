@@ -48,7 +48,6 @@ namespace Calculator
             this.oper_reciprocal = new System.Windows.Forms.Button();
             this.symbol_percent = new System.Windows.Forms.Button();
             this.oper_sqrt = new System.Windows.Forms.Button();
-            this.btn_pos_neg = new System.Windows.Forms.Button();
             this.bx_output = new System.Windows.Forms.TextBox();
             this.del_btn = new System.Windows.Forms.Button();
             this.cancelAll_btn = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@ namespace Calculator
             this.button1 = new System.Windows.Forms.Button();
             this.passValue_operation = new System.Windows.Forms.Label();
             this.equals_btn = new System.Windows.Forms.Button();
+            this.posneg_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -273,20 +273,6 @@ namespace Calculator
             this.oper_sqrt.UseWaitCursor = true;
             this.oper_sqrt.Visible = false;
             // 
-            // btn_pos_neg
-            // 
-            this.btn_pos_neg.Location = new System.Drawing.Point(40, 385);
-            this.btn_pos_neg.Name = "btn_pos_neg";
-            this.btn_pos_neg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_pos_neg.Size = new System.Drawing.Size(68, 59);
-            this.btn_pos_neg.TabIndex = 20;
-            this.btn_pos_neg.Text = " ±";
-            this.btn_pos_neg.UseCompatibleTextRendering = true;
-            this.btn_pos_neg.UseVisualStyleBackColor = true;
-            this.btn_pos_neg.UseWaitCursor = true;
-            this.btn_pos_neg.Visible = false;
-            this.btn_pos_neg.Click += new System.EventHandler(this.btn_pos_neg_Click);
-            // 
             // bx_output
             // 
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -359,6 +345,18 @@ namespace Calculator
             this.equals_btn.UseVisualStyleBackColor = true;
             this.equals_btn.Click += new System.EventHandler(this.equals_Click);
             // 
+            // posneg_btn
+            // 
+            this.posneg_btn.BackColor = System.Drawing.Color.Transparent;
+            this.posneg_btn.Location = new System.Drawing.Point(40, 385);
+            this.posneg_btn.Name = "posneg_btn";
+            this.posneg_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.posneg_btn.Size = new System.Drawing.Size(68, 59);
+            this.posneg_btn.TabIndex = 0;
+            this.posneg_btn.Text = " ±";
+            this.posneg_btn.UseVisualStyleBackColor = false;
+            this.posneg_btn.Click += new System.EventHandler(this.posneg_btn_Click);
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -370,7 +368,6 @@ namespace Calculator
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.cancelAll_btn);
             this.Controls.Add(this.del_btn);
-            this.Controls.Add(this.btn_pos_neg);
             this.Controls.Add(this.oper_sqrt);
             this.Controls.Add(this.symbol_percent);
             this.Controls.Add(this.oper_reciprocal);
@@ -389,6 +386,7 @@ namespace Calculator
             this.Controls.Add(this.btn_2);
             this.Controls.Add(this.btn_1);
             this.Controls.Add(this.bx_output);
+            this.Controls.Add(this.posneg_btn);
             this.Controls.Add(this.btn_0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
@@ -421,16 +419,14 @@ namespace Calculator
         private System.Windows.Forms.Button oper_reciprocal;
         private System.Windows.Forms.Button symbol_percent;
         private System.Windows.Forms.Button oper_sqrt;
-        private System.Windows.Forms.Button btn_pos_neg;
         private System.Windows.Forms.TextBox bx_output;
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Button cancelAll_btn;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label passValuewithOep;
         private System.Windows.Forms.Label passValue_operation;
-        private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button equals_btn;
+        private System.Windows.Forms.Button posneg_btn;
     }
 }
 
