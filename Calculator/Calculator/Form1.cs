@@ -48,7 +48,7 @@ namespace Calculator
             {
                 if (!bx_output.Text.Contains("."))
                     bx_output.Text = bx_output.Text + btn_num.Text;
-                if (!bx_output.Text.Contains("." + "0"))
+                if (!bx_output.Text.Contains("0"))
                     bx_output.Text = "0" + btn_num.Text;
             }
             else
