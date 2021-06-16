@@ -46,8 +46,6 @@ namespace Calculator
             this.oper_times = new System.Windows.Forms.Button();
             this.oper_divide = new System.Windows.Forms.Button();
             this.oper_reciprocal = new System.Windows.Forms.Button();
-            this.symbol_percent = new System.Windows.Forms.Button();
-            this.oper_sqrt = new System.Windows.Forms.Button();
             this.bx_output = new System.Windows.Forms.TextBox();
             this.del_btn = new System.Windows.Forms.Button();
             this.cancelAll_btn = new System.Windows.Forms.Button();
@@ -56,6 +54,8 @@ namespace Calculator
             this.passValue_operation = new System.Windows.Forms.Label();
             this.equals_btn = new System.Windows.Forms.Button();
             this.posneg_btn = new System.Windows.Forms.Button();
+            this.sqrt_btn = new System.Windows.Forms.Button();
+            this.percent_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -247,32 +247,6 @@ namespace Calculator
             this.oper_reciprocal.UseWaitCursor = true;
             this.oper_reciprocal.Visible = false;
             // 
-            // symbol_percent
-            // 
-            this.symbol_percent.Location = new System.Drawing.Point(40, 116);
-            this.symbol_percent.Name = "symbol_percent";
-            this.symbol_percent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.symbol_percent.Size = new System.Drawing.Size(68, 53);
-            this.symbol_percent.TabIndex = 18;
-            this.symbol_percent.Text = "%";
-            this.symbol_percent.UseCompatibleTextRendering = true;
-            this.symbol_percent.UseVisualStyleBackColor = true;
-            this.symbol_percent.UseWaitCursor = true;
-            this.symbol_percent.Visible = false;
-            // 
-            // oper_sqrt
-            // 
-            this.oper_sqrt.Location = new System.Drawing.Point(105, 166);
-            this.oper_sqrt.Name = "oper_sqrt";
-            this.oper_sqrt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.oper_sqrt.Size = new System.Drawing.Size(74, 56);
-            this.oper_sqrt.TabIndex = 19;
-            this.oper_sqrt.Text = "√ ";
-            this.oper_sqrt.UseCompatibleTextRendering = true;
-            this.oper_sqrt.UseVisualStyleBackColor = true;
-            this.oper_sqrt.UseWaitCursor = true;
-            this.oper_sqrt.Visible = false;
-            // 
             // bx_output
             // 
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -357,6 +331,28 @@ namespace Calculator
             this.posneg_btn.UseVisualStyleBackColor = false;
             this.posneg_btn.Click += new System.EventHandler(this.posneg_btn_Click);
             // 
+            // sqrt_btn
+            // 
+            this.sqrt_btn.Location = new System.Drawing.Point(105, 166);
+            this.sqrt_btn.Name = "sqrt_btn";
+            this.sqrt_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sqrt_btn.Size = new System.Drawing.Size(74, 55);
+            this.sqrt_btn.TabIndex = 14;
+            this.sqrt_btn.Text = "√";
+            this.sqrt_btn.UseVisualStyleBackColor = true;
+            this.sqrt_btn.Click += new System.EventHandler(this.oper_click);
+            // 
+            // percent_btn
+            // 
+            this.percent_btn.Location = new System.Drawing.Point(40, 116);
+            this.percent_btn.Name = "percent_btn";
+            this.percent_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.percent_btn.Size = new System.Drawing.Size(68, 53);
+            this.percent_btn.TabIndex = 14;
+            this.percent_btn.Text = "%";
+            this.percent_btn.UseVisualStyleBackColor = true;
+            this.percent_btn.Click += new System.EventHandler(this.oper_click);
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -368,10 +364,10 @@ namespace Calculator
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.cancelAll_btn);
             this.Controls.Add(this.del_btn);
-            this.Controls.Add(this.oper_sqrt);
-            this.Controls.Add(this.symbol_percent);
             this.Controls.Add(this.oper_reciprocal);
             this.Controls.Add(this.oper_divide);
+            this.Controls.Add(this.sqrt_btn);
+            this.Controls.Add(this.percent_btn);
             this.Controls.Add(this.oper_times);
             this.Controls.Add(this.oper_minus);
             this.Controls.Add(this.oper_plus);
@@ -417,8 +413,6 @@ namespace Calculator
         private System.Windows.Forms.Button oper_times;
         private System.Windows.Forms.Button oper_divide;
         private System.Windows.Forms.Button oper_reciprocal;
-        private System.Windows.Forms.Button symbol_percent;
-        private System.Windows.Forms.Button oper_sqrt;
         private System.Windows.Forms.TextBox bx_output;
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Button cancelAll_btn;
@@ -427,6 +421,8 @@ namespace Calculator
         private System.Windows.Forms.Label passValue_operation;
         private System.Windows.Forms.Button equals_btn;
         private System.Windows.Forms.Button posneg_btn;
+        private System.Windows.Forms.Button sqrt_btn;
+        private System.Windows.Forms.Button percent_btn;
     }
 }
 

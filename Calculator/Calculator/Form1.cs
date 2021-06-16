@@ -97,6 +97,15 @@ namespace Calculator
                 case "*":
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
                     break;
+
+                //square root
+                case "√":
+                    bx_output.Text = (Math.Sqrt(Double.Parse(bx_output.Text))).ToString();
+                    break;
+
+                //percentage
+                case "%":
+                    bx_output.Text = ((resultValue * Double.Parse(bx_output.Text)) / 100).ToString();
             }//end of switch+
             resultValue = Double.Parse(bx_output.Text);
             passValue_operation.Text = "";
