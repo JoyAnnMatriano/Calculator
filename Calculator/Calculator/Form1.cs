@@ -106,6 +106,7 @@ namespace Calculator
                 //percentage
                 case "%":
                     bx_output.Text = ((resultValue * Double.Parse(bx_output.Text)) / 100).ToString();
+                    break;
             }//end of switch+
             resultValue = Double.Parse(bx_output.Text);
             passValue_operation.Text = "";
