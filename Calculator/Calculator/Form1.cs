@@ -100,7 +100,7 @@ namespace Calculator
 
                 //square root
                 case "√":
-                    bx_output.Text = (Math.Sqrt(Double.Parse(bx_output.Text))).ToString();
+                    bx_output.Text = ("√" + (Math.Sqrt(resultValue)).ToString());
                     break;
 
                 //percentage
