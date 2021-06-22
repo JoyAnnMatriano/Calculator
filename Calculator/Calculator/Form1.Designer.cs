@@ -45,7 +45,6 @@ namespace Calculator
             this.oper_minus = new System.Windows.Forms.Button();
             this.oper_times = new System.Windows.Forms.Button();
             this.oper_divide = new System.Windows.Forms.Button();
-            this.oper_reciprocal = new System.Windows.Forms.Button();
             this.bx_output = new System.Windows.Forms.TextBox();
             this.del_btn = new System.Windows.Forms.Button();
             this.cancelAll_btn = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@ namespace Calculator
             this.posneg_btn = new System.Windows.Forms.Button();
             this.sqrt_btn = new System.Windows.Forms.Button();
             this.percent_btn = new System.Windows.Forms.Button();
+            this.over_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -234,19 +234,6 @@ namespace Calculator
             this.oper_divide.UseVisualStyleBackColor = true;
             this.oper_divide.Click += new System.EventHandler(this.oper_click);
             // 
-            // oper_reciprocal
-            // 
-            this.oper_reciprocal.Location = new System.Drawing.Point(40, 166);
-            this.oper_reciprocal.Name = "oper_reciprocal";
-            this.oper_reciprocal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.oper_reciprocal.Size = new System.Drawing.Size(68, 56);
-            this.oper_reciprocal.TabIndex = 17;
-            this.oper_reciprocal.Text = "1/x";
-            this.oper_reciprocal.UseCompatibleTextRendering = true;
-            this.oper_reciprocal.UseVisualStyleBackColor = true;
-            this.oper_reciprocal.UseWaitCursor = true;
-            this.oper_reciprocal.Visible = false;
-            // 
             // bx_output
             // 
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -353,18 +340,29 @@ namespace Calculator
             this.percent_btn.UseVisualStyleBackColor = true;
             this.percent_btn.Click += new System.EventHandler(this.oper_click);
             // 
+            // over_btn
+            // 
+            this.over_btn.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.over_btn.Location = new System.Drawing.Point(40, 166);
+            this.over_btn.Name = "over_btn";
+            this.over_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.over_btn.Size = new System.Drawing.Size(68, 55);
+            this.over_btn.TabIndex = 29;
+            this.over_btn.Text = "1 / x";
+            this.over_btn.UseVisualStyleBackColor = true;
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 473);
+            this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
             this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.cancelAll_btn);
             this.Controls.Add(this.del_btn);
-            this.Controls.Add(this.oper_reciprocal);
             this.Controls.Add(this.oper_divide);
             this.Controls.Add(this.sqrt_btn);
             this.Controls.Add(this.percent_btn);
@@ -412,7 +410,6 @@ namespace Calculator
         private System.Windows.Forms.Button oper_minus;
         private System.Windows.Forms.Button oper_times;
         private System.Windows.Forms.Button oper_divide;
-        private System.Windows.Forms.Button oper_reciprocal;
         private System.Windows.Forms.TextBox bx_output;
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Button cancelAll_btn;
@@ -423,6 +420,7 @@ namespace Calculator
         private System.Windows.Forms.Button posneg_btn;
         private System.Windows.Forms.Button sqrt_btn;
         private System.Windows.Forms.Button percent_btn;
+        private System.Windows.Forms.Button over_btn;
     }
 }
 
