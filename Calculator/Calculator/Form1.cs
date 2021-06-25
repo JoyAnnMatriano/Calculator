@@ -138,5 +138,10 @@ namespace Calculator
         {
             bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
         }
+
+        private void sqrt_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = ("√" + Double.Parse(bx_output).ToString());
+        }
     }
 }
