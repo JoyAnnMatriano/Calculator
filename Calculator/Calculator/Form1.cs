@@ -60,10 +60,17 @@ namespace Calculator
             Button b_Oper = (Button)sender;
             if (resultValue != 0)
             {
+                if (b_Oper.Text == "√")
+                    bx_output.Text = Math.Sqrt(Double.Parse(bx_output.Text)).ToString();
                 equals_btn.PerformClick();
                 operationExecuted = b_Oper.Text;
                 passValue_operation.Text = resultValue + " " + operationExecuted;
                 isOperationExecuted = true;
+            }
+            else if (b_Oper.Text == "√")
+            {
+                bx_output.Text = Math.Sqrt(Double.Parse(bx_output.Text)).ToString();
+                resultValue = Math.Sqrt(Double.Parse(bx_output.Text));
             }
             else
             {
@@ -137,11 +144,6 @@ namespace Calculator
         private void posneg_btn_Click(object sender, EventArgs e)
         {
             bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
-        }
-
-        private void sqrt_btn_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = ("√" + Double.Parse(bx_output).ToString());
         }
     }
 }
