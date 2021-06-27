@@ -15,6 +15,7 @@ namespace Calculator
         Double resultValue = 0;
         String operationExecuted = "";
         bool isOperationExecuted = false;
+        value_sqrt = "";
 
         public Calculator_box()
         {
@@ -105,15 +106,11 @@ namespace Calculator
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
                     break;
 
-                //square root
-                case "√":
-                    bx_output.Text = ("√" + (Math.Sqrt(resultValue)).ToString());
-                    break;
-
                 //percentage
                 case "%":
                     bx_output.Text = ((resultValue * Double.Parse(bx_output.Text)) / 100).ToString();
                     break;
+
             }//end of switch+
             resultValue = Double.Parse(bx_output.Text);
             passValue_operation.Text = "";
@@ -144,6 +141,16 @@ namespace Calculator
         private void posneg_btn_Click(object sender, EventArgs e)
         {
             bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
+        }
+
+        private void btn_sqrt(object sender, EventArgs e)
+        {
+            bx_output.Text = "√";
+            if (bx_output.Text != "0" && bx_output.Text.Contains("√"))
+            {
+                value_sqrt=(bx_output.Text.ToString()).Remove(bx_output.Text.ToString().Length - 1, 1);
+                bx_output.Text = Math.Sqrt(value_sqrt).ToString();
+            }
         }
     }
 }
