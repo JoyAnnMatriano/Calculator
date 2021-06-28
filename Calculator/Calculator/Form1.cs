@@ -15,7 +15,6 @@ namespace Calculator
         Double resultValue = 0;
         String operationExecuted = "";
         bool isOperationExecuted = false;
-        value_sqrt = "";
 
         public Calculator_box()
         {
