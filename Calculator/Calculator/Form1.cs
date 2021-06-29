@@ -144,10 +144,11 @@ namespace Calculator
 
         private void btn_sqrt(object sender, EventArgs e)
         {
-            bx_output.Text = "√";
+            Button b = (Button)sender;
+            if (resultValue != 0)
+                bx_output.Text = "√";
             if (bx_output.Text != "0" && bx_output.Text.Contains("√"))
             {
-                value_sqrt=(bx_output.Text.ToString()).Remove(bx_output.Text.ToString().Length - 1, 1);
                 bx_output.Text = Math.Sqrt(value_sqrt).ToString();
             }
         }
