@@ -14,6 +14,7 @@ namespace Calculator
     {
         Double resultValue = 0;
         String operationExecuted = "";
+        String operationExecuted2 = "";
         bool isOperationExecuted = false;
 
         public Calculator_box()
@@ -29,11 +30,6 @@ namespace Calculator
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_num_Click(object sender, EventArgs e)
@@ -144,13 +140,81 @@ namespace Calculator
 
         private void btn_sqrt(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
-            if (resultValue != 0)
-                bx_output.Text = "√";
-            if (bx_output.Text != "0" && bx_output.Text.Contains("√"))
-            {
-                bx_output.Text = Math.Sqrt(value_sqrt).ToString();
-            }
+
         }
+
+        //for history buttons
+        private void checks_Ops()
+        {
+
+            //Will check: No operation on the display at all
+            if (operationExecuted == string.Empty)
+            {
+
+            }
+
+            //Will Check: No operation and if the box output is 0
+            else if (operationExecuted == string.Empty && bx_output.Text == "0")
+            {
+
+            }
+
+            //Will Check: when there is an operation in the box output
+            else if (operationExecuted != string.Empty)
+            {
+                switch (operationExecuted)
+                {
+                    //add
+                    case "+":
+                        bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //minus
+                    case "-":
+                        bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //divide
+                    case "/":
+                        bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //multiply
+                    case "*":
+                        bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                }
+            }
+
+            //Will Check: when there is an operation in the box output (for double ops)
+            else if (operationExecuted2 != string.Empty)
+            {
+                switch (operationExecuted)
+                {
+                    //add
+                    case "+":
+                        bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //minus
+                    case "-":
+                        bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //divide
+                    case "/":
+                        bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
+                        break;
+
+                    //multiply
+                    case "*":
+                        bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                }
+
+            }
+
+        }
+
     }
 }
