@@ -162,6 +162,7 @@ namespace Calculator
             //Will Check: when there is an operation in the box output
             else if (operationExecuted != string.Empty)
             {
+                //will act if the case is called out
                 switch (operationExecuted)
                 {
                     //add
@@ -189,27 +190,36 @@ namespace Calculator
             //Will Check: when there is an operation in the box output (for double ops)
             else if (operationExecuted2 != string.Empty)
             {
-                switch (operationExecuted)
+                try
                 {
-                    //add
-                    case "+":
-                        bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
-                        break;
 
-                    //minus
-                    case "-":
-                        bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
-                        break;
 
-                    //divide
-                    case "/":
-                        bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
-                        break;
+                    switch (operationExecuted)
+                    {
+                        //add
+                        case "+":
+                            bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
+                            break;
 
-                    //multiply
-                    case "*":
-                        bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
-                        break;
+                        //minus
+                        case "-":
+                            bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
+                            break;
+
+                        //divide
+                        case "/":
+                            bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
+                            break;
+
+                        //multiply
+                        case "*":
+                            bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                            break;
+                    }
+                }
+                catch (Exception)
+                {
+                    bx_output.Text= "Math Error!";
                 }
 
             }
