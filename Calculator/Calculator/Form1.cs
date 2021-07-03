@@ -35,7 +35,7 @@ namespace Calculator
         private void btn_num_Click(object sender, EventArgs e)
         {
 
-            if ((bx_output.Text == "0") || (isOperationExecuted) )
+            if ((bx_output.Text == "0") || (isOperationExecuted))
                 bx_output.Clear();
 
             isOperationExecuted = false;
@@ -48,7 +48,7 @@ namespace Calculator
                     bx_output.Text = "0" + btn_num.Text;
             }
             else
-            bx_output.Text = bx_output.Text + btn_num.Text;
+                bx_output.Text = bx_output.Text + btn_num.Text;
         }
 
         private void oper_click(object sender, EventArgs e)
@@ -79,34 +79,7 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
-            switch(operationExecuted)
-            {
-                //add
-                case "+":
-                    bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
-                    break;
-
-                //minus
-                case "-":
-                    bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
-                    break;
-
-                //divide
-                case "/":
-                    bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
-                    break;
-
-                //multiply
-                case "*":
-                    bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
-                    break;
-
-                //percentage
-                case "%":
-                    bx_output.Text = ((resultValue * Double.Parse(bx_output.Text)) / 100).ToString();
-                    break;
-
-            }//end of switch+
+            switch_ops();
             resultValue = Double.Parse(bx_output.Text);
             passValue_operation.Text = "";
         }
@@ -163,28 +136,7 @@ namespace Calculator
             else if (operationExecuted != string.Empty)
             {
                 //will act if the case is called out
-                switch (operationExecuted)
-                {
-                    //add
-                    case "+":
-                        bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
-                        break;
-
-                    //minus
-                    case "-":
-                        bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
-                        break;
-
-                    //divide
-                    case "÷":
-                        bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
-                        break;
-
-                    //multiply
-                    case "*":
-                        bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
-                        break;
-                }
+                switch_ops();
             }
 
             //Will Check: when there is an operation in the box output (for double ops)
@@ -192,39 +144,45 @@ namespace Calculator
             {
                 try
                 {
-
-
-                    switch (operationExecuted)
-                    {
-                        //add
-                        case "+":
-                            bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
-                            break;
-
-                        //minus
-                        case "-":
-                            bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
-                            break;
-
-                        //divide
-                        case "÷":
-                            bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
-                            break;
-
-                        //multiply
-                        case "*":
-                            bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
-                            break;
-                    }
+                    switch_ops();
                 }
                 catch (Exception)
                 {
-                    bx_output.Text= "Math Error!";
+                    bx_output.Text = "Math Error!";
                 }
 
             }
 
         }
+        private void switch_ops()
+        {
+            switch (operationExecuted)
+            {
+                //add
+                case "+":
+                    bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
+                    break;
 
+                //minus
+                case "-":
+                    bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
+                    break;
+
+                //divide
+                case "÷":
+                    bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
+                    break;
+
+                //multiply
+                case "*":
+                    bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                    break;
+
+                default:
+                    break;
+
+            }
+
+        }
     }
 }
