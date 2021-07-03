@@ -162,25 +162,20 @@ namespace Calculator
                 case "+":
                     bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
                     break;
-
                 //minus
                 case "-":
                     bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
                     break;
-
                 //divide
                 case "÷":
                     bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
                     break;
-
                 //multiply
                 case "*":
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
                     break;
-
                 default:
                     break;
-
             }
 
         }
