@@ -176,7 +176,7 @@ namespace Calculator
                         break;
 
                     //divide
-                    case "/":
+                    case "÷":
                         bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
                         break;
 
@@ -207,7 +207,7 @@ namespace Calculator
                             break;
 
                         //divide
-                        case "/":
+                        case "÷":
                             bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
                             break;
 
