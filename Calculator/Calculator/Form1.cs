@@ -40,6 +40,9 @@ namespace Calculator
 
             isOperationExecuted = false;
             Button btn_num = (Button)sender;
+            decimal EndResult = 0;
+            decimal StoredMemory = 0;
+
             if (btn_num.Text == ".")
             {
                 if (!bx_output.Text.Contains("."))
@@ -49,6 +52,31 @@ namespace Calculator
             }
             else
                 bx_output.Text = bx_output.Text + btn_num.Text;
+            if (btn_num.Text == "MC") //Memory Clear
+            {
+                StoredMemory = 0;
+                return;
+            }
+            if (btn_num.Text == "MR") //Memory Recall
+            {
+                bx_output.Text = StoredMemory.ToString();
+                return;
+            }
+            if (btn_num.Text == "M+") //Memory Add
+            {
+                StoredMemory += EndResult;
+                return;
+            }
+            if (btn_num.Text == "M-") //Memory minus
+            {
+                StoredMemory -= EndResult;
+                return;
+            }
+            if (btn_num.Text == "MS") //Memory subtract
+            {
+                StoredMemory -= EndResult;
+                return;
+            }
         }
 
         private void oper_click(object sender, EventArgs e)
@@ -177,6 +205,11 @@ namespace Calculator
                 default:
                     break;
             }
+
+        }
+
+        private void show_hist(object sender, EventArgs e)
+        {
 
         }
     }

@@ -369,7 +369,7 @@ namespace Calculator
             this.button2.TabIndex = 24;
             this.button2.Text = "MC";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button2.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // button3
             // 
@@ -379,7 +379,7 @@ namespace Calculator
             this.button3.TabIndex = 24;
             this.button3.Text = "MR";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button3.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // button4
             // 
@@ -389,7 +389,7 @@ namespace Calculator
             this.button4.TabIndex = 24;
             this.button4.Text = "M+";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button4.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // button5
             // 
@@ -399,7 +399,7 @@ namespace Calculator
             this.button5.TabIndex = 24;
             this.button5.Text = "M-";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button5.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // button6
             // 
@@ -409,7 +409,7 @@ namespace Calculator
             this.button6.TabIndex = 24;
             this.button6.Text = "MS";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button6.Click += new System.EventHandler(this.btn_num_Click);
             // 
             // button7
             // 
@@ -419,7 +419,7 @@ namespace Calculator
             this.button7.TabIndex = 24;
             this.button7.Text = "M🢓";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.cancelAll_Click);
+            this.button7.Click += new System.EventHandler(this.show_hist);
             // 
             // Calculator_box
             // 
