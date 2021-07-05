@@ -31,7 +31,6 @@ namespace Calculator
         {
             bx_output.Text = "0";
         }
-
         private void btn_num_Click(object sender, EventArgs e)
         {
 
@@ -143,11 +142,10 @@ namespace Calculator
         {
 
         }
-
+        //============================================================Private Voids (made)
         //for history buttons
         private void checks_Ops()
         {
-
             //Will check: No operation on the display at all
             if (operationExecuted == string.Empty)
             {
@@ -178,9 +176,7 @@ namespace Calculator
                 {
                     bx_output.Text = "Math Error!";
                 }
-
             }
-
         }
         private void switch_ops()
         {
@@ -205,9 +201,7 @@ namespace Calculator
                 default:
                     break;
             }
-
         }
-
         private void show_hist(object sender, EventArgs e)
         {
 
