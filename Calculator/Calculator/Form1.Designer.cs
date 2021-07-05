@@ -66,8 +66,13 @@ namespace Calculator
             // 
             // btn_0
             // 
-            this.btn_0.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_0.Location = new System.Drawing.Point(106, 435);
+            this.btn_0.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_0.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_0.FlatAppearance.BorderSize = 3;
+            this.btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_0.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_0.ForeColor = System.Drawing.Color.White;
+            this.btn_0.Location = new System.Drawing.Point(106, 494);
             this.btn_0.Name = "btn_0";
             this.btn_0.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_0.Size = new System.Drawing.Size(72, 53);
@@ -78,8 +83,13 @@ namespace Calculator
             // 
             // btn_1
             // 
-            this.btn_1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_1.Location = new System.Drawing.Point(28, 376);
+            this.btn_1.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_1.FlatAppearance.BorderSize = 3;
+            this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_1.ForeColor = System.Drawing.Color.White;
+            this.btn_1.Location = new System.Drawing.Point(28, 437);
             this.btn_1.Name = "btn_1";
             this.btn_1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_1.Size = new System.Drawing.Size(72, 53);
@@ -90,8 +100,13 @@ namespace Calculator
             // 
             // btn_2
             // 
-            this.btn_2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_2.Location = new System.Drawing.Point(106, 376);
+            this.btn_2.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_2.FlatAppearance.BorderSize = 3;
+            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_2.ForeColor = System.Drawing.Color.White;
+            this.btn_2.Location = new System.Drawing.Point(106, 437);
             this.btn_2.Name = "btn_2";
             this.btn_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_2.Size = new System.Drawing.Size(72, 53);
@@ -102,8 +117,13 @@ namespace Calculator
             // 
             // btn_3
             // 
-            this.btn_3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_3.Location = new System.Drawing.Point(184, 376);
+            this.btn_3.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_3.FlatAppearance.BorderSize = 3;
+            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_3.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_3.ForeColor = System.Drawing.Color.White;
+            this.btn_3.Location = new System.Drawing.Point(184, 437);
             this.btn_3.Name = "btn_3";
             this.btn_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_3.Size = new System.Drawing.Size(72, 53);
@@ -114,8 +134,13 @@ namespace Calculator
             // 
             // btn_4
             // 
-            this.btn_4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_4.Location = new System.Drawing.Point(28, 317);
+            this.btn_4.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_4.FlatAppearance.BorderSize = 3;
+            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_4.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_4.ForeColor = System.Drawing.Color.White;
+            this.btn_4.Location = new System.Drawing.Point(28, 380);
             this.btn_4.Name = "btn_4";
             this.btn_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_4.Size = new System.Drawing.Size(72, 53);
@@ -126,8 +151,13 @@ namespace Calculator
             // 
             // btn_5
             // 
-            this.btn_5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_5.Location = new System.Drawing.Point(106, 317);
+            this.btn_5.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_5.FlatAppearance.BorderSize = 3;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_5.ForeColor = System.Drawing.Color.White;
+            this.btn_5.Location = new System.Drawing.Point(106, 380);
             this.btn_5.Name = "btn_5";
             this.btn_5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_5.Size = new System.Drawing.Size(72, 53);
@@ -138,8 +168,13 @@ namespace Calculator
             // 
             // btn_6
             // 
-            this.btn_6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_6.Location = new System.Drawing.Point(184, 317);
+            this.btn_6.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_6.FlatAppearance.BorderSize = 3;
+            this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_6.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_6.ForeColor = System.Drawing.Color.White;
+            this.btn_6.Location = new System.Drawing.Point(184, 380);
             this.btn_6.Name = "btn_6";
             this.btn_6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_6.Size = new System.Drawing.Size(72, 53);
@@ -150,9 +185,13 @@ namespace Calculator
             // 
             // btn_7
             // 
-            this.btn_7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_7.Location = new System.Drawing.Point(28, 262);
+            this.btn_7.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_7.FlatAppearance.BorderSize = 3;
+            this.btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_7.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_7.ForeColor = System.Drawing.Color.White;
+            this.btn_7.Location = new System.Drawing.Point(28, 323);
             this.btn_7.Name = "btn_7";
             this.btn_7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_7.Size = new System.Drawing.Size(72, 53);
@@ -163,8 +202,13 @@ namespace Calculator
             // 
             // btn_8
             // 
-            this.btn_8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_8.Location = new System.Drawing.Point(106, 262);
+            this.btn_8.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_8.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_8.FlatAppearance.BorderSize = 3;
+            this.btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_8.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_8.ForeColor = System.Drawing.Color.White;
+            this.btn_8.Location = new System.Drawing.Point(106, 323);
             this.btn_8.Name = "btn_8";
             this.btn_8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_8.Size = new System.Drawing.Size(72, 53);
@@ -175,8 +219,13 @@ namespace Calculator
             // 
             // btn_9
             // 
-            this.btn_9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_9.Location = new System.Drawing.Point(184, 262);
+            this.btn_9.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_9.FlatAppearance.BorderSize = 3;
+            this.btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_9.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_9.ForeColor = System.Drawing.Color.White;
+            this.btn_9.Location = new System.Drawing.Point(184, 323);
             this.btn_9.Name = "btn_9";
             this.btn_9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_9.Size = new System.Drawing.Size(72, 53);
@@ -187,8 +236,13 @@ namespace Calculator
             // 
             // btn_dot
             // 
-            this.btn_dot.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_dot.Location = new System.Drawing.Point(184, 435);
+            this.btn_dot.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_dot.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_dot.FlatAppearance.BorderSize = 3;
+            this.btn_dot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dot.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_dot.ForeColor = System.Drawing.Color.White;
+            this.btn_dot.Location = new System.Drawing.Point(184, 494);
             this.btn_dot.Name = "btn_dot";
             this.btn_dot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_dot.Size = new System.Drawing.Size(72, 53);
@@ -199,7 +253,12 @@ namespace Calculator
             // 
             // oper_plus
             // 
-            this.oper_plus.Location = new System.Drawing.Point(262, 376);
+            this.oper_plus.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.oper_plus.FlatAppearance.BorderSize = 3;
+            this.oper_plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oper_plus.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oper_plus.ForeColor = System.Drawing.Color.White;
+            this.oper_plus.Location = new System.Drawing.Point(262, 437);
             this.oper_plus.Name = "oper_plus";
             this.oper_plus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_plus.Size = new System.Drawing.Size(72, 53);
@@ -210,7 +269,12 @@ namespace Calculator
             // 
             // oper_minus
             // 
-            this.oper_minus.Location = new System.Drawing.Point(262, 317);
+            this.oper_minus.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.oper_minus.FlatAppearance.BorderSize = 3;
+            this.oper_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oper_minus.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oper_minus.ForeColor = System.Drawing.Color.White;
+            this.oper_minus.Location = new System.Drawing.Point(262, 380);
             this.oper_minus.Name = "oper_minus";
             this.oper_minus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_minus.Size = new System.Drawing.Size(72, 53);
@@ -221,7 +285,12 @@ namespace Calculator
             // 
             // oper_times
             // 
-            this.oper_times.Location = new System.Drawing.Point(262, 262);
+            this.oper_times.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.oper_times.FlatAppearance.BorderSize = 3;
+            this.oper_times.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oper_times.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oper_times.ForeColor = System.Drawing.Color.White;
+            this.oper_times.Location = new System.Drawing.Point(262, 323);
             this.oper_times.Name = "oper_times";
             this.oper_times.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_times.Size = new System.Drawing.Size(72, 53);
@@ -232,7 +301,12 @@ namespace Calculator
             // 
             // oper_divide
             // 
-            this.oper_divide.Location = new System.Drawing.Point(262, 206);
+            this.oper_divide.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.oper_divide.FlatAppearance.BorderSize = 3;
+            this.oper_divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oper_divide.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oper_divide.ForeColor = System.Drawing.Color.White;
+            this.oper_divide.Location = new System.Drawing.Point(262, 266);
             this.oper_divide.Name = "oper_divide";
             this.oper_divide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.oper_divide.Size = new System.Drawing.Size(72, 53);
@@ -243,21 +317,25 @@ namespace Calculator
             // 
             // bx_output
             // 
-            this.bx_output.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bx_output.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bx_output.BackColor = System.Drawing.Color.CadetBlue;
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bx_output.Location = new System.Drawing.Point(28, 61);
+            this.bx_output.Location = new System.Drawing.Point(28, 21);
             this.bx_output.Multiline = true;
             this.bx_output.Name = "bx_output";
             this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bx_output.Size = new System.Drawing.Size(306, 40);
+            this.bx_output.Size = new System.Drawing.Size(306, 139);
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // del_btn
             // 
-            this.del_btn.Location = new System.Drawing.Point(262, 150);
+            this.del_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.del_btn.FlatAppearance.BorderSize = 3;
+            this.del_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.del_btn.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.del_btn.ForeColor = System.Drawing.Color.White;
+            this.del_btn.Location = new System.Drawing.Point(262, 210);
             this.del_btn.Name = "del_btn";
             this.del_btn.Size = new System.Drawing.Size(72, 53);
             this.del_btn.TabIndex = 23;
@@ -267,9 +345,14 @@ namespace Calculator
             // 
             // cancelAll_btn
             // 
-            this.cancelAll_btn.Location = new System.Drawing.Point(184, 151);
+            this.cancelAll_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.cancelAll_btn.FlatAppearance.BorderSize = 3;
+            this.cancelAll_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelAll_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancelAll_btn.ForeColor = System.Drawing.Color.White;
+            this.cancelAll_btn.Location = new System.Drawing.Point(184, 210);
             this.cancelAll_btn.Name = "cancelAll_btn";
-            this.cancelAll_btn.Size = new System.Drawing.Size(72, 52);
+            this.cancelAll_btn.Size = new System.Drawing.Size(72, 53);
             this.cancelAll_btn.TabIndex = 24;
             this.cancelAll_btn.Text = "C";
             this.cancelAll_btn.UseVisualStyleBackColor = true;
@@ -277,9 +360,14 @@ namespace Calculator
             // 
             // cancel_btn
             // 
-            this.cancel_btn.Location = new System.Drawing.Point(106, 151);
+            this.cancel_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.cancel_btn.FlatAppearance.BorderSize = 3;
+            this.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancel_btn.ForeColor = System.Drawing.Color.White;
+            this.cancel_btn.Location = new System.Drawing.Point(106, 210);
             this.cancel_btn.Name = "cancel_btn";
-            this.cancel_btn.Size = new System.Drawing.Size(72, 52);
+            this.cancel_btn.Size = new System.Drawing.Size(72, 53);
             this.cancel_btn.TabIndex = 25;
             this.cancel_btn.Text = "CE";
             this.cancel_btn.UseVisualStyleBackColor = true;
@@ -287,11 +375,16 @@ namespace Calculator
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(106, 206);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(106, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 53);
             this.button1.TabIndex = 26;
-            this.button1.Text = "x2 ";
+            this.button1.Text = "x²";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // passValue_operation
@@ -299,7 +392,7 @@ namespace Calculator
             this.passValue_operation.AutoSize = true;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passValue_operation.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.passValue_operation.Location = new System.Drawing.Point(40, 21);
+            this.passValue_operation.Location = new System.Drawing.Point(286, 30);
             this.passValue_operation.Name = "passValue_operation";
             this.passValue_operation.Size = new System.Drawing.Size(31, 37);
             this.passValue_operation.TabIndex = 27;
@@ -307,7 +400,12 @@ namespace Calculator
             // 
             // equals_btn
             // 
-            this.equals_btn.Location = new System.Drawing.Point(262, 435);
+            this.equals_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.equals_btn.FlatAppearance.BorderSize = 3;
+            this.equals_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.equals_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.equals_btn.ForeColor = System.Drawing.Color.White;
+            this.equals_btn.Location = new System.Drawing.Point(262, 494);
             this.equals_btn.Name = "equals_btn";
             this.equals_btn.Size = new System.Drawing.Size(72, 53);
             this.equals_btn.TabIndex = 28;
@@ -317,8 +415,13 @@ namespace Calculator
             // 
             // posneg_btn
             // 
-            this.posneg_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.posneg_btn.Location = new System.Drawing.Point(28, 435);
+            this.posneg_btn.BackColor = System.Drawing.Color.CadetBlue;
+            this.posneg_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.posneg_btn.FlatAppearance.BorderSize = 3;
+            this.posneg_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.posneg_btn.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.posneg_btn.ForeColor = System.Drawing.Color.White;
+            this.posneg_btn.Location = new System.Drawing.Point(28, 494);
             this.posneg_btn.Name = "posneg_btn";
             this.posneg_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.posneg_btn.Size = new System.Drawing.Size(72, 53);
@@ -329,7 +432,12 @@ namespace Calculator
             // 
             // sqrt_btn
             // 
-            this.sqrt_btn.Location = new System.Drawing.Point(184, 206);
+            this.sqrt_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.sqrt_btn.FlatAppearance.BorderSize = 3;
+            this.sqrt_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sqrt_btn.Font = new System.Drawing.Font("Bodoni MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sqrt_btn.ForeColor = System.Drawing.Color.White;
+            this.sqrt_btn.Location = new System.Drawing.Point(184, 266);
             this.sqrt_btn.Name = "sqrt_btn";
             this.sqrt_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sqrt_btn.Size = new System.Drawing.Size(72, 53);
@@ -340,8 +448,13 @@ namespace Calculator
             // 
             // percent_btn
             // 
-            this.percent_btn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.percent_btn.Location = new System.Drawing.Point(28, 151);
+            this.percent_btn.BackColor = System.Drawing.Color.CadetBlue;
+            this.percent_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.percent_btn.FlatAppearance.BorderSize = 3;
+            this.percent_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.percent_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.percent_btn.ForeColor = System.Drawing.Color.White;
+            this.percent_btn.Location = new System.Drawing.Point(28, 210);
             this.percent_btn.Name = "percent_btn";
             this.percent_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.percent_btn.Size = new System.Drawing.Size(72, 53);
@@ -352,10 +465,14 @@ namespace Calculator
             // 
             // over_btn
             // 
-            this.over_btn.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.over_btn.Location = new System.Drawing.Point(28, 206);
+            this.over_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.over_btn.FlatAppearance.BorderSize = 3;
+            this.over_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.over_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.over_btn.ForeColor = System.Drawing.Color.White;
+            this.over_btn.Location = new System.Drawing.Point(28, 266);
             this.over_btn.Name = "over_btn";
-            this.over_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.over_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.over_btn.Size = new System.Drawing.Size(72, 53);
             this.over_btn.TabIndex = 29;
             this.over_btn.Text = "1 / x";
@@ -363,9 +480,13 @@ namespace Calculator
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(28, 107);
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(26, 179);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 26);
+            this.button2.Size = new System.Drawing.Size(48, 24);
             this.button2.TabIndex = 24;
             this.button2.Text = "MC";
             this.button2.UseVisualStyleBackColor = true;
@@ -373,9 +494,13 @@ namespace Calculator
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(81, 107);
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(78, 179);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 26);
+            this.button3.Size = new System.Drawing.Size(48, 24);
             this.button3.TabIndex = 24;
             this.button3.Text = "MR";
             this.button3.UseVisualStyleBackColor = true;
@@ -383,9 +508,13 @@ namespace Calculator
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(134, 107);
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(130, 179);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 26);
+            this.button4.Size = new System.Drawing.Size(48, 24);
             this.button4.TabIndex = 24;
             this.button4.Text = "M+";
             this.button4.UseVisualStyleBackColor = true;
@@ -393,9 +522,13 @@ namespace Calculator
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(187, 107);
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(182, 179);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 26);
+            this.button5.Size = new System.Drawing.Size(48, 24);
             this.button5.TabIndex = 24;
             this.button5.Text = "M-";
             this.button5.UseVisualStyleBackColor = true;
@@ -403,9 +536,13 @@ namespace Calculator
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(238, 107);
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(234, 179);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 26);
+            this.button6.Size = new System.Drawing.Size(48, 24);
             this.button6.TabIndex = 24;
             this.button6.Text = "MS";
             this.button6.UseVisualStyleBackColor = true;
@@ -413,9 +550,13 @@ namespace Calculator
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(289, 107);
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(286, 179);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 26);
+            this.button7.Size = new System.Drawing.Size(48, 24);
             this.button7.TabIndex = 24;
             this.button7.Text = "M🢓";
             this.button7.UseVisualStyleBackColor = true;
@@ -425,11 +566,11 @@ namespace Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(363, 532);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(363, 597);
+            this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
-            this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.button7);
@@ -465,6 +606,7 @@ namespace Calculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.TransparencyKey = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.Calculator_box_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
