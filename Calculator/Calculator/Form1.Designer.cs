@@ -62,6 +62,10 @@ namespace Calculator
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.txbx_his_mem = new System.Windows.Forms.TextBox();
+            this.NOhistory_lbl = new System.Windows.Forms.Label();
+            this.NOmemory_lbl = new System.Windows.Forms.Label();
+            this.trash_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -562,12 +566,61 @@ namespace Calculator
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.show_hist);
             // 
+            // txbx_his_mem
+            // 
+            this.txbx_his_mem.BackColor = System.Drawing.Color.Silver;
+            this.txbx_his_mem.Location = new System.Drawing.Point(-2, 581);
+            this.txbx_his_mem.Multiline = true;
+            this.txbx_his_mem.Name = "txbx_his_mem";
+            this.txbx_his_mem.Size = new System.Drawing.Size(360, 362);
+            this.txbx_his_mem.TabIndex = 30;
+            // 
+            // NOhistory_lbl
+            // 
+            this.NOhistory_lbl.AutoSize = true;
+            this.NOhistory_lbl.BackColor = System.Drawing.Color.Silver;
+            this.NOhistory_lbl.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NOhistory_lbl.Location = new System.Drawing.Point(26, 607);
+            this.NOhistory_lbl.Name = "NOhistory_lbl";
+            this.NOhistory_lbl.Size = new System.Drawing.Size(165, 20);
+            this.NOhistory_lbl.TabIndex = 31;
+            this.NOhistory_lbl.Text = "There\'s no history yet";
+            // 
+            // NOmemory_lbl
+            // 
+            this.NOmemory_lbl.AutoSize = true;
+            this.NOmemory_lbl.BackColor = System.Drawing.Color.Silver;
+            this.NOmemory_lbl.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NOmemory_lbl.Location = new System.Drawing.Point(26, 607);
+            this.NOmemory_lbl.Name = "NOmemory_lbl";
+            this.NOmemory_lbl.Size = new System.Drawing.Size(252, 20);
+            this.NOmemory_lbl.TabIndex = 31;
+            this.NOmemory_lbl.Text = "There\'s nothing saved in memory";
+            // 
+            // trash_btn
+            // 
+            this.trash_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.trash_btn.Image = global::Calculator.Properties.Resources.img_510054;
+            this.trash_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.trash_btn.Location = new System.Drawing.Point(-2, 266);
+            this.trash_btn.Name = "trash_btn";
+            this.trash_btn.Size = new System.Drawing.Size(868, 622);
+            this.trash_btn.TabIndex = 32;
+            this.trash_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.trash_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.trash_btn.UseVisualStyleBackColor = true;
+            this.trash_btn.Click += new System.EventHandler(this.trash_btn_Click);
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(363, 597);
+            this.ClientSize = new System.Drawing.Size(357, 919);
+            this.Controls.Add(this.trash_btn);
+            this.Controls.Add(this.NOmemory_lbl);
+            this.Controls.Add(this.NOhistory_lbl);
+            this.Controls.Add(this.txbx_his_mem);
             this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
@@ -646,6 +699,10 @@ namespace Calculator
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox txbx_his_mem;
+        private System.Windows.Forms.Label NOhistory_lbl;
+        private System.Windows.Forms.Label NOmemory_lbl;
+        private System.Windows.Forms.Button trash_btn;
     }
 }
 

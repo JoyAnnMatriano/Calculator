@@ -211,5 +211,15 @@ namespace Calculator
         {
 
         }
+
+        private void txbx_his_mem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trash_btn_Click(object sender, EventArgs e)
+        {
+            trash_btn.
+        }
     }
 }
