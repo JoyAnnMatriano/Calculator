@@ -65,7 +65,7 @@ namespace Calculator
             this.txbx_his_mem = new System.Windows.Forms.TextBox();
             this.NOhistory_lbl = new System.Windows.Forms.Label();
             this.NOmemory_lbl = new System.Windows.Forms.Label();
-            this.trash_btn = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -597,19 +597,16 @@ namespace Calculator
             this.NOmemory_lbl.TabIndex = 31;
             this.NOmemory_lbl.Text = "There\'s nothing saved in memory";
             // 
-            // trash_btn
+            // button8
             // 
-            this.trash_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.trash_btn.Image = global::Calculator.Properties.Resources.img_510054;
-            this.trash_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.trash_btn.Location = new System.Drawing.Point(-2, 266);
-            this.trash_btn.Name = "trash_btn";
-            this.trash_btn.Size = new System.Drawing.Size(868, 622);
-            this.trash_btn.TabIndex = 32;
-            this.trash_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.trash_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.trash_btn.UseVisualStyleBackColor = true;
-            this.trash_btn.Click += new System.EventHandler(this.trash_btn_Click);
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button8.Location = new System.Drawing.Point(-44, 30);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(486, 582);
+            this.button8.TabIndex = 32;
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // Calculator_box
             // 
@@ -617,7 +614,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(357, 919);
-            this.Controls.Add(this.trash_btn);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.NOmemory_lbl);
             this.Controls.Add(this.NOhistory_lbl);
             this.Controls.Add(this.txbx_his_mem);
@@ -702,7 +699,7 @@ namespace Calculator
         private System.Windows.Forms.TextBox txbx_his_mem;
         private System.Windows.Forms.Label NOhistory_lbl;
         private System.Windows.Forms.Label NOmemory_lbl;
-        private System.Windows.Forms.Button trash_btn;
+        private System.Windows.Forms.Button button8;
     }
 }
 
