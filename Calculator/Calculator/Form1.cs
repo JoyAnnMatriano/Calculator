@@ -16,21 +16,66 @@ namespace Calculator
         String operationExecuted = "";
         String operationExecuted2 = "";
         bool isOperationExecuted = false;
+        bx_his_mem.Visible = false;
 
         public Calculator_box()
         {
             InitializeComponent();
         }
+        //==================================================================
+        //---------Buttons (individual code)
+        //
+        //......"C"
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
             resultValue = 0;
         }
-
+        //......"CE"
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
         }
+        //......"="
+        private void equals_Click(object sender, EventArgs e)
+        {
+            switch_ops();
+            resultValue = Double.Parse(bx_output.Text);
+            passValue_operation.Text = "";
+        }
+        //......"←"
+        private void del_btn_Click(object sender, EventArgs e)
+        {
+            string zero = "0";
+            if (bx_output.Text.Length > 1)
+            {
+                zero = bx_output.Text;
+                zero = zero.Substring(0, zero.Length - 1);
+            }
+            bx_output.Text = zero;
+        }
+        private void cancelAll_Click(object sender, EventArgs e)
+        {
+            passValue_operation.Text = "0";
+            bx_output.Text = "0";
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = "0";
+        }
+
+        private void posneg_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
+        }
+
+        private void btn_sqrt(object sender, EventArgs e)
+        {
+
+        }
+        //==================================================================
+        //--------Buttons (multiple)
         private void btn_num_Click(object sender, EventArgs e)
         {
 
@@ -71,13 +116,12 @@ namespace Calculator
                 StoredMemory -= EndResult;
                 return;
             }
-            if (btn_num.Text == "MS") //Memory subtract
+            if (btn_num.Text == "MS") //Memory Store
             {
                 StoredMemory -= EndResult;
                 return;
             }
         }
-
         private void oper_click(object sender, EventArgs e)
         {
             Button b_Oper = (Button)sender;
@@ -103,46 +147,8 @@ namespace Calculator
                 isOperationExecuted = true;
             }
         }
-
-        private void equals_Click(object sender, EventArgs e)
-        {
-            switch_ops();
-            resultValue = Double.Parse(bx_output.Text);
-            passValue_operation.Text = "";
-        }
-
-        private void del_btn_Click(object sender, EventArgs e)
-        {
-            string zero = "0";
-            if (bx_output.Text.Length > 1)
-            {
-                zero = bx_output.Text;
-                zero = zero.Substring(0, zero.Length - 1);
-            }
-            bx_output.Text = zero;
-        }
-
-        private void cancelAll_Click(object sender, EventArgs e)
-        {
-            passValue_operation.Text = "0";
-            bx_output.Text = "0";
-        }
-
-        private void cancel_btn_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = "0";
-        }
-
-        private void posneg_btn_Click(object sender, EventArgs e)
-        {
-            bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
-        }
-
-        private void btn_sqrt(object sender, EventArgs e)
-        {
-
-        }
-        //============================================================Private Voids (made)
+        //========================================================================================
+        //--------Private voids (made)
         //for history buttons
         private void checks_Ops()
         {
@@ -219,7 +225,11 @@ namespace Calculator
 
         private void trash_btn_Click(object sender, EventArgs e)
         {
-            trash_btn.
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
