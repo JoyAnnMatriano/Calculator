@@ -231,5 +231,10 @@ namespace Calculator
         {
 
         }
+
+        private void bx_output_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
