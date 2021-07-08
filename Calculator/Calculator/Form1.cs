@@ -16,7 +16,7 @@ namespace Calculator
         String operationExecuted = "";
         String operationExecuted2 = "";
         bool isOperationExecuted = false;
-        bx_his_mem.Visible = false;
+
 
         public Calculator_box()
         {

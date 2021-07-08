@@ -569,7 +569,7 @@ namespace Calculator
             // bx_his_mem
             // 
             this.bx_his_mem.BackColor = System.Drawing.Color.Silver;
-            this.bx_his_mem.Location = new System.Drawing.Point(0, 209);
+            this.bx_his_mem.Location = new System.Drawing.Point(0, 553);
             this.bx_his_mem.Multiline = true;
             this.bx_his_mem.Name = "bx_his_mem";
             this.bx_his_mem.Size = new System.Drawing.Size(360, 362);
@@ -580,7 +580,7 @@ namespace Calculator
             this.NOhistory_lbl.AutoSize = true;
             this.NOhistory_lbl.BackColor = System.Drawing.Color.Silver;
             this.NOhistory_lbl.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NOhistory_lbl.Location = new System.Drawing.Point(28, 229);
+            this.NOhistory_lbl.Location = new System.Drawing.Point(26, 585);
             this.NOhistory_lbl.Name = "NOhistory_lbl";
             this.NOhistory_lbl.Size = new System.Drawing.Size(165, 20);
             this.NOhistory_lbl.TabIndex = 31;
@@ -591,7 +591,7 @@ namespace Calculator
             this.NOmemory_lbl.AutoSize = true;
             this.NOmemory_lbl.BackColor = System.Drawing.Color.Silver;
             this.NOmemory_lbl.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NOmemory_lbl.Location = new System.Drawing.Point(26, 229);
+            this.NOmemory_lbl.Location = new System.Drawing.Point(4, 585);
             this.NOmemory_lbl.Name = "NOmemory_lbl";
             this.NOmemory_lbl.Size = new System.Drawing.Size(252, 20);
             this.NOmemory_lbl.TabIndex = 31;
@@ -601,7 +601,7 @@ namespace Calculator
             // 
             this.button8.Image = global::Calculator.Properties.Resources.trashbin;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(217, 494);
+            this.button8.Location = new System.Drawing.Point(217, 638);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(128, 67);
             this.button8.TabIndex = 32;
@@ -612,8 +612,8 @@ namespace Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(357, 567);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(357, 717);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.NOmemory_lbl);
             this.Controls.Add(this.NOhistory_lbl);
