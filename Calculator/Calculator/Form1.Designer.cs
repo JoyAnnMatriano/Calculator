@@ -66,6 +66,7 @@ namespace Calculator
             this.NOhistory_lbl = new System.Windows.Forms.Label();
             this.NOmemory_lbl = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.standard_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_0
@@ -338,11 +339,12 @@ namespace Calculator
             // 
             this.bx_output.BackColor = System.Drawing.Color.CadetBlue;
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bx_output.Location = new System.Drawing.Point(28, 21);
+            this.bx_output.ForeColor = System.Drawing.Color.White;
+            this.bx_output.Location = new System.Drawing.Point(28, 93);
             this.bx_output.Multiline = true;
             this.bx_output.Name = "bx_output";
             this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bx_output.Size = new System.Drawing.Size(306, 139);
+            this.bx_output.Size = new System.Drawing.Size(306, 65);
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -416,11 +418,12 @@ namespace Calculator
             this.passValue_operation.AutoSize = true;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passValue_operation.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.passValue_operation.Location = new System.Drawing.Point(286, 30);
+            this.passValue_operation.Location = new System.Drawing.Point(286, 53);
             this.passValue_operation.Name = "passValue_operation";
             this.passValue_operation.Size = new System.Drawing.Size(31, 37);
             this.passValue_operation.TabIndex = 27;
             this.passValue_operation.Text = "  ";
+            this.passValue_operation.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // equals_btn
             // 
@@ -638,12 +641,22 @@ namespace Calculator
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // standard_lbl
+            // 
+            this.standard_lbl.AutoSize = true;
+            this.standard_lbl.Location = new System.Drawing.Point(26, 13);
+            this.standard_lbl.Name = "standard_lbl";
+            this.standard_lbl.Size = new System.Drawing.Size(54, 15);
+            this.standard_lbl.TabIndex = 33;
+            this.standard_lbl.Text = "Standard";
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(357, 717);
+            this.Controls.Add(this.standard_lbl);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.NOmemory_lbl);
             this.Controls.Add(this.NOhistory_lbl);
@@ -677,15 +690,12 @@ namespace Calculator
             this.Controls.Add(this.btn_3);
             this.Controls.Add(this.btn_2);
             this.Controls.Add(this.btn_1);
-            this.Controls.Add(this.bx_output);
             this.Controls.Add(this.posneg_btn);
             this.Controls.Add(this.btn_0);
+            this.Controls.Add(this.bx_output);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimizeBox = false;
             this.Name = "Calculator_box";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
-            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Calculator_box_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -730,6 +740,7 @@ namespace Calculator
         private System.Windows.Forms.Label NOhistory_lbl;
         private System.Windows.Forms.Label NOmemory_lbl;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label standard_lbl;
     }
 }
 
