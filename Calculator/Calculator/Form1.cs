@@ -16,6 +16,8 @@ namespace Calculator
         String operationExecuted = "";
         String operationExecuted2 = "";
         bool isOperationExecuted = false;
+        
+       
 
 
         public Calculator_box()
@@ -77,6 +79,7 @@ namespace Calculator
         }
         //==================================================================
         //--------Buttons (multiple)
+        //Number Buttons
         private void btn_num_Click(object sender, EventArgs e)
         {
 
@@ -97,6 +100,7 @@ namespace Calculator
             }
             else
                 bx_output.Text = bx_output.Text + btn_num.Text;
+            //Memory Button
             if (btn_num.Text == "MC") //Memory Clear
             {
                 StoredMemory = 0;
@@ -123,6 +127,7 @@ namespace Calculator
                 return;
             }
         }
+        //Operations
         private void oper_click(object sender, EventArgs e)
         {
             Button b_Oper = (Button)sender;
@@ -187,33 +192,41 @@ namespace Calculator
         }
         private void switch_ops()
         {
-            switch (operationExecuted)
+            try
             {
-                //add
-                case "+":
-                    bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
-                    break;
-                //minus
-                case "-":
-                    bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
-                    break;
-                //divide
-                case "÷":
-                    bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
-                    break;
-                //multiply
-                case "*":
-                    bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
-                    break;
-                //squared
-                case "x²":
-                    bx_output.Text = (resultValue * resultValue).ToString();
-                    break;
-                case "²":
-                    bx_output.Text = (Double.Parse(bx_output.Text) * Double.Parse(bx_output.Text)).ToString();
-                    break;
-                default:
-                    break;
+                switch (operationExecuted)
+                {
+                    //add
+                    case "+":
+                        bx_output.Text = (resultValue + Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //minus
+                    case "-":
+                        bx_output.Text = (resultValue - Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //divide
+                    case "÷":
+                        bx_output.Text = (resultValue / Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //multiply
+                    case "*":
+                        bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //squared
+                    case "x²":
+                        bx_output.Text = (resultValue * resultValue).ToString();
+                        break;
+                    case "²":
+                        bx_output.Text = (Double.Parse(bx_output.Text) * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+                bx_output.Text = "Math Error!";
+
             }
         }
         private void show_hist(object sender, EventArgs e)
@@ -226,20 +239,6 @@ namespace Calculator
 
         }
 
-        private void txbx_his_mem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void trash_btn_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bx_output_TextChanged(object sender, EventArgs e)
         {
 
@@ -247,7 +246,6 @@ namespace Calculator
 
         private void squared_btn_Click(object sender, EventArgs e)
         {
-            bx_output.Text = bx_output.Text + "²";
         }
     }
 }
