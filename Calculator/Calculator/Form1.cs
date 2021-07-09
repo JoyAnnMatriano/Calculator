@@ -55,17 +55,27 @@ namespace Calculator
                         bx_output.Text = (num1 / Double.Parse(bx_output.Text)).ToString();
                         break;
                     //multiply
-                    case "*":
+                    case "x":
                         bx_output.Text = (num1 * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //percent
+                    case "%":
+                        bx_output.Text = (num1 / 100).ToString();
                         break;
                     //squared
                     case "x²":
-                        bx_output.Text = (num1 * num2).ToString();
+                        bx_output.Text = Math.Pow(num1, 2).ToString();
+                        passValue_operation.Text = (num1 + "²");
+                        break;
+                    //recirpocal
+                    case "1 / x":
+                        bx_output.Text = (1 / num1).ToString();
+                        passValue_operation.Text = ("1/(" + num1 + ")");
                         break;
                     default:
                         break;
                 }
-                num2 = Double.Parse(bx_output.Text);
+                num1 = Double.Parse(bx_output.Text);
                 operationExecuted = " ";
             }
             catch
@@ -112,13 +122,7 @@ namespace Calculator
         private void btn_num_Click(object sender, EventArgs e)
         {
 
-            if ((bx_output.Text == "0") || (isOperationExecuted))
-                bx_output.Clear();
-
-            isOperationExecuted = false;
             Button btn_num = (Button)sender;
-            decimal EndResult = 0;
-            decimal StoredMemory = 0;
 
             if (btn_num.Text == ".")
             {
@@ -127,9 +131,17 @@ namespace Calculator
                 if (!bx_output.Text.Contains("0"))
                     bx_output.Text = "0" + btn_num.Text;
             }
+            else if (bx_output.Text == "0")
+            {
+                bx_output.Clear();
+                bx_output.Text = bx_output.Text + btn_num.Text;
+            }
             else
                 bx_output.Text = bx_output.Text + btn_num.Text;
-            
+
+            decimal EndResult = 0;
+            decimal StoredMemory = 0;
+
             //Memory Button
             if (btn_num.Text == "MC") //Memory Clear
             {
@@ -166,13 +178,13 @@ namespace Calculator
                 if (num1 != 0)
                 {
                     equals_btn.PerformClick();
-                    num1 = Double.Parse(bx_output.Text);
                     operationExecuted = b_Oper.Text;
                     passValue_operation.Text = num1 + " " + operationExecuted;
                     bx_output.Text = "";
                 }
                 else
                 {
+                    equals_btn.PerformClick();
                     operationExecuted = b_Oper.Text;
                     passValue_operation.Text = bx_output.Text + "" + b_Oper.Text;
                     bx_output.Text = "";

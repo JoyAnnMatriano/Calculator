@@ -592,9 +592,13 @@ namespace Calculator
             // 
             // passValue_operation
             // 
-            this.passValue_operation.Location = new System.Drawing.Point(234, 64);
+            this.passValue_operation.BackColor = System.Drawing.Color.CadetBlue;
+            this.passValue_operation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passValue_operation.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.passValue_operation.Location = new System.Drawing.Point(272, 55);
             this.passValue_operation.Name = "passValue_operation";
-            this.passValue_operation.Size = new System.Drawing.Size(100, 23);
+            this.passValue_operation.Size = new System.Drawing.Size(62, 32);
             this.passValue_operation.TabIndex = 34;
             // 
             // Calculator_box
