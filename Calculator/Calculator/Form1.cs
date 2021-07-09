@@ -72,7 +72,8 @@ namespace Calculator
 
         private void btn_sqrt(object sender, EventArgs e)
         {
-
+            bx_output.Text = Math.Sqrt(Double.Parse(bx_output.Text)).ToString();
+            resultValue = Math.Sqrt(Double.Parse(bx_output.Text));
         }
         //==================================================================
         //--------Buttons (multiple)
@@ -203,6 +204,10 @@ namespace Calculator
                 //multiply
                 case "*":
                     bx_output.Text = (resultValue * Double.Parse(bx_output.Text)).ToString();
+                    break;
+                //squared
+                case "x²":
+                    bx_output.Text = (resultValue * resultValue).ToString();
                     break;
                 default:
                     break;

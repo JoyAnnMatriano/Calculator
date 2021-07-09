@@ -49,7 +49,7 @@ namespace Calculator
             this.del_btn = new System.Windows.Forms.Button();
             this.cancelAll_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.squared_btn = new System.Windows.Forms.Button();
             this.passValue_operation = new System.Windows.Forms.Label();
             this.equals_btn = new System.Windows.Forms.Button();
             this.posneg_btn = new System.Windows.Forms.Button();
@@ -398,28 +398,30 @@ namespace Calculator
             this.cancel_btn.UseVisualStyleBackColor = true;
             this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
-            // button1
+            // squared_btn
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(106, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 53);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "x²";
-            this.button1.UseVisualStyleBackColor = true;
+            this.squared_btn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.squared_btn.FlatAppearance.BorderSize = 3;
+            this.squared_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.squared_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.squared_btn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.squared_btn.ForeColor = System.Drawing.Color.White;
+            this.squared_btn.Location = new System.Drawing.Point(106, 266);
+            this.squared_btn.Name = "squared_btn";
+            this.squared_btn.Size = new System.Drawing.Size(72, 53);
+            this.squared_btn.TabIndex = 26;
+            this.squared_btn.Text = "x²";
+            this.squared_btn.UseVisualStyleBackColor = true;
+            this.squared_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // passValue_operation
             // 
             this.passValue_operation.AutoSize = true;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passValue_operation.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.passValue_operation.ForeColor = System.Drawing.SystemColors.Control;
             this.passValue_operation.Location = new System.Drawing.Point(286, 53);
             this.passValue_operation.Name = "passValue_operation";
+            this.passValue_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.passValue_operation.Size = new System.Drawing.Size(31, 37);
             this.passValue_operation.TabIndex = 27;
             this.passValue_operation.Text = "  ";
@@ -644,9 +646,11 @@ namespace Calculator
             // standard_lbl
             // 
             this.standard_lbl.AutoSize = true;
-            this.standard_lbl.Location = new System.Drawing.Point(26, 13);
+            this.standard_lbl.Font = new System.Drawing.Font("Futura Hv BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.standard_lbl.ForeColor = System.Drawing.Color.White;
+            this.standard_lbl.Location = new System.Drawing.Point(26, 19);
             this.standard_lbl.Name = "standard_lbl";
-            this.standard_lbl.Size = new System.Drawing.Size(54, 15);
+            this.standard_lbl.Size = new System.Drawing.Size(118, 29);
             this.standard_lbl.TabIndex = 33;
             this.standard_lbl.Text = "Standard";
             // 
@@ -664,7 +668,7 @@ namespace Calculator
             this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.squared_btn);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -723,7 +727,7 @@ namespace Calculator
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Button cancelAll_btn;
         private System.Windows.Forms.Button cancel_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button squared_btn;
         private System.Windows.Forms.Label passValue_operation;
         private System.Windows.Forms.Button equals_btn;
         private System.Windows.Forms.Button posneg_btn;
