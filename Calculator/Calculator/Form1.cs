@@ -209,6 +209,9 @@ namespace Calculator
                 case "x²":
                     bx_output.Text = (resultValue * resultValue).ToString();
                     break;
+                case "²":
+                    bx_output.Text = (Double.Parse(bx_output.Text) * Double.Parse(bx_output.Text)).ToString();
+                    break;
                 default:
                     break;
             }
@@ -240,6 +243,11 @@ namespace Calculator
         private void bx_output_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void squared_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = bx_output.Text + "²";
         }
     }
 }

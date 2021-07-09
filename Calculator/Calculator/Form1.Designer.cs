@@ -412,7 +412,7 @@ namespace Calculator
             this.squared_btn.TabIndex = 26;
             this.squared_btn.Text = "x²";
             this.squared_btn.UseVisualStyleBackColor = true;
-            this.squared_btn.Click += new System.EventHandler(this.button1_Click);
+            this.squared_btn.Click += new System.EventHandler(this.squared_btn_Click);
             // 
             // passValue_operation
             // 
