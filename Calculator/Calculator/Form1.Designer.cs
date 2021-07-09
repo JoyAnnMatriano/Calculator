@@ -415,7 +415,7 @@ namespace Calculator
             this.passValue_operation.AutoSize = true;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passValue_operation.ForeColor = System.Drawing.SystemColors.Control;
-            this.passValue_operation.Location = new System.Drawing.Point(286, 53);
+            this.passValue_operation.Location = new System.Drawing.Point(225, 53);
             this.passValue_operation.Name = "passValue_operation";
             this.passValue_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.passValue_operation.Size = new System.Drawing.Size(31, 37);

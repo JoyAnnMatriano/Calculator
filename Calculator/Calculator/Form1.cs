@@ -14,12 +14,8 @@ namespace Calculator
     {
         Double num1 = 0;
         String operationExecuted = "";
-        String operationExecuted2 = "";
         bool isOperationExecuted = false;
         
-       
-
-
         public Calculator_box()
         {
             InitializeComponent();
@@ -31,19 +27,29 @@ namespace Calculator
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
+            passValue_operation.Text = "";
             num1 = 0;
+            del_btn.Enabled = true;
         }
         //......"CE"
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
-            bx_output.Text = "0";
+            bx_output.Clear();
+            del_btn.Enabled = true;
         }
         //......"="
         private void equals_Click(object sender, EventArgs e)
         {
-            switch_ops();
-            num1 = Double.Parse(bx_output.Text);
-            passValue_operation.Text = "";
+            try
+            {
+                switch_ops();
+                num1 = Double.Parse(bx_output.Text);
+                passValue_operation.Text = "";
+            }
+            catch
+            {
+                bx_output.Text = "Math Error!";
+            }
         }
         //......"←"
         private void del_btn_Click(object sender, EventArgs e)
@@ -100,6 +106,7 @@ namespace Calculator
             }
             else
                 bx_output.Text = bx_output.Text + btn_num.Text;
+            
             //Memory Button
             if (btn_num.Text == "MC") //Memory Clear
             {
@@ -143,8 +150,8 @@ namespace Calculator
                 else
                 {
                     operationExecuted = b_Oper.Text;
-                    double num1 = Double.Parse(bx_output.Text);
-                    passValue_operation.Text = $"{num1} {b_Oper.Text}";
+                    num1 = Double.Parse(bx_output.Text);
+                    passValue_operation.Text = bx_output + "" + b_Oper.Text;
                     bx_output.Text = "";
                 }
             }
@@ -156,41 +163,6 @@ namespace Calculator
         }
         //========================================================================================
         //--------Private voids (made)
-        //for history buttons
-        private void checks_Ops()
-        {
-            //Will check: No operation on the display at all
-            if (operationExecuted == string.Empty)
-            {
-
-            }
-
-            //Will Check: No operation and if the box output is 0
-            else if (operationExecuted == string.Empty && bx_output.Text == "0")
-            {
-
-            }
-
-            //Will Check: when there is an operation in the box output
-            else if (operationExecuted != string.Empty)
-            {
-                //will act if the case is called out
-                switch_ops();
-            }
-
-            //Will Check: when there is an operation in the box output (for double ops)
-            else if (operationExecuted2 != string.Empty)
-            {
-                try
-                {
-                    switch_ops();
-                }
-                catch (Exception)
-                {
-                    bx_output.Text = "Math Error!";
-                }
-            }
-        }
         private void switch_ops()
         {
             try
