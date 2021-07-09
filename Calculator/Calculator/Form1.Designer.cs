@@ -55,14 +55,23 @@ namespace Calculator
             this.sqrt_btn = new System.Windows.Forms.Button();
             this.percent_btn = new System.Windows.Forms.Button();
             this.over_btn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.MClear = new System.Windows.Forms.Button();
+            this.MReall = new System.Windows.Forms.Button();
+            this.MAdd = new System.Windows.Forms.Button();
+            this.MSubtract = new System.Windows.Forms.Button();
+            this.MSave = new System.Windows.Forms.Button();
+            this.MShow = new System.Windows.Forms.Button();
             this.standard_lbl = new System.Windows.Forms.Label();
             this.passValue_operation = new System.Windows.Forms.TextBox();
+            this.bx_memory = new System.Windows.Forms.TextBox();
+            this.bx_history = new System.Windows.Forms.TextBox();
+            this.noHistory_lbl = new System.Windows.Forms.Label();
+            this.noMemory_lbl = new System.Windows.Forms.Label();
+            this.history_btn = new System.Windows.Forms.Button();
+            this.closeMem_btn = new System.Windows.Forms.Button();
+            this.closeHis_btn = new System.Windows.Forms.Button();
+            this.clearHis_bx = new System.Windows.Forms.Button();
+            this.clearMem_bx = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_0
@@ -339,6 +348,7 @@ namespace Calculator
             this.bx_output.Location = new System.Drawing.Point(28, 93);
             this.bx_output.Multiline = true;
             this.bx_output.Name = "bx_output";
+            this.bx_output.ReadOnly = true;
             this.bx_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bx_output.Size = new System.Drawing.Size(306, 65);
             this.bx_output.TabIndex = 1;
@@ -407,6 +417,7 @@ namespace Calculator
             this.squared_btn.TabIndex = 26;
             this.squared_btn.Text = "x²";
             this.squared_btn.UseVisualStyleBackColor = true;
+            this.squared_btn.Click += new System.EventHandler(this.squared_btn_Click);
             // 
             // equals_btn
             // 
@@ -495,89 +506,91 @@ namespace Calculator
             this.over_btn.TabIndex = 29;
             this.over_btn.Text = "1 / x";
             this.over_btn.UseVisualStyleBackColor = true;
+            this.over_btn.Click += new System.EventHandler(this.over_btn_Click);
             // 
-            // button2
+            // MClear
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(26, 179);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 24);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "MC";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btn_num_Click);
+            this.MClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MClear.FlatAppearance.BorderSize = 0;
+            this.MClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MClear.ForeColor = System.Drawing.Color.White;
+            this.MClear.Location = new System.Drawing.Point(26, 179);
+            this.MClear.Name = "MClear";
+            this.MClear.Size = new System.Drawing.Size(48, 24);
+            this.MClear.TabIndex = 24;
+            this.MClear.Text = "MC";
+            this.MClear.UseVisualStyleBackColor = true;
+            this.MClear.Click += new System.EventHandler(this.MClear_Click);
             // 
-            // button3
+            // MReall
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(78, 179);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 24);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "MR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btn_num_Click);
+            this.MReall.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MReall.FlatAppearance.BorderSize = 0;
+            this.MReall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MReall.ForeColor = System.Drawing.Color.White;
+            this.MReall.Location = new System.Drawing.Point(78, 179);
+            this.MReall.Name = "MReall";
+            this.MReall.Size = new System.Drawing.Size(48, 24);
+            this.MReall.TabIndex = 24;
+            this.MReall.Text = "MR";
+            this.MReall.UseVisualStyleBackColor = true;
+            this.MReall.Click += new System.EventHandler(this.MReall_Click);
             // 
-            // button4
+            // MAdd
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(130, 179);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 24);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "M+";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btn_num_Click);
+            this.MAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MAdd.FlatAppearance.BorderSize = 0;
+            this.MAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MAdd.ForeColor = System.Drawing.Color.White;
+            this.MAdd.Location = new System.Drawing.Point(130, 179);
+            this.MAdd.Name = "MAdd";
+            this.MAdd.Size = new System.Drawing.Size(48, 24);
+            this.MAdd.TabIndex = 24;
+            this.MAdd.Text = "M+";
+            this.MAdd.UseVisualStyleBackColor = true;
+            this.MAdd.Click += new System.EventHandler(this.MAdd_Click);
             // 
-            // button5
+            // MSubtract
             // 
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(182, 179);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 24);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "M-";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.btn_num_Click);
+            this.MSubtract.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MSubtract.FlatAppearance.BorderSize = 0;
+            this.MSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MSubtract.ForeColor = System.Drawing.Color.White;
+            this.MSubtract.Location = new System.Drawing.Point(182, 179);
+            this.MSubtract.Name = "MSubtract";
+            this.MSubtract.Size = new System.Drawing.Size(48, 24);
+            this.MSubtract.TabIndex = 24;
+            this.MSubtract.Text = "M-";
+            this.MSubtract.UseVisualStyleBackColor = true;
+            this.MSubtract.Click += new System.EventHandler(this.MSubtract_Click);
             // 
-            // button6
+            // MSave
             // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(234, 179);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(48, 24);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "MS";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.btn_num_Click);
+            this.MSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MSave.FlatAppearance.BorderSize = 0;
+            this.MSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MSave.ForeColor = System.Drawing.Color.White;
+            this.MSave.Location = new System.Drawing.Point(234, 179);
+            this.MSave.Name = "MSave";
+            this.MSave.Size = new System.Drawing.Size(48, 24);
+            this.MSave.TabIndex = 24;
+            this.MSave.Text = "MS";
+            this.MSave.UseVisualStyleBackColor = true;
+            this.MSave.Click += new System.EventHandler(this.MSave_Click);
             // 
-            // button7
+            // MShow
             // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(286, 179);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(48, 24);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "M🢓";
-            this.button7.UseVisualStyleBackColor = true;
+            this.MShow.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.MShow.FlatAppearance.BorderSize = 0;
+            this.MShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MShow.ForeColor = System.Drawing.Color.White;
+            this.MShow.Location = new System.Drawing.Point(286, 179);
+            this.MShow.Name = "MShow";
+            this.MShow.Size = new System.Drawing.Size(48, 24);
+            this.MShow.TabIndex = 24;
+            this.MShow.Text = "M🢓";
+            this.MShow.UseVisualStyleBackColor = true;
+            this.MShow.Click += new System.EventHandler(this.MShow_Click);
             // 
             // standard_lbl
             // 
@@ -596,29 +609,164 @@ namespace Calculator
             this.passValue_operation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passValue_operation.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.passValue_operation.Location = new System.Drawing.Point(272, 55);
+            this.passValue_operation.Location = new System.Drawing.Point(28, 55);
             this.passValue_operation.Name = "passValue_operation";
-            this.passValue_operation.Size = new System.Drawing.Size(62, 32);
+            this.passValue_operation.ReadOnly = true;
+            this.passValue_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.passValue_operation.Size = new System.Drawing.Size(306, 32);
             this.passValue_operation.TabIndex = 34;
+            this.passValue_operation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // bx_memory
+            // 
+            this.bx_memory.BackColor = System.Drawing.Color.Silver;
+            this.bx_memory.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bx_memory.Location = new System.Drawing.Point(-1, 210);
+            this.bx_memory.Multiline = true;
+            this.bx_memory.Name = "bx_memory";
+            this.bx_memory.ReadOnly = true;
+            this.bx_memory.Size = new System.Drawing.Size(370, 374);
+            this.bx_memory.TabIndex = 35;
+            this.bx_memory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bx_memory.TextChanged += new System.EventHandler(this.memory_change);
+            // 
+            // bx_history
+            // 
+            this.bx_history.BackColor = System.Drawing.Color.Silver;
+            this.bx_history.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bx_history.Location = new System.Drawing.Point(-1, 210);
+            this.bx_history.Multiline = true;
+            this.bx_history.Name = "bx_history";
+            this.bx_history.ReadOnly = true;
+            this.bx_history.Size = new System.Drawing.Size(370, 372);
+            this.bx_history.TabIndex = 35;
+            this.bx_history.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bx_history.TextChanged += new System.EventHandler(this.history_change);
+            // 
+            // noHistory_lbl
+            // 
+            this.noHistory_lbl.AutoSize = true;
+            this.noHistory_lbl.BackColor = System.Drawing.Color.Silver;
+            this.noHistory_lbl.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.noHistory_lbl.Location = new System.Drawing.Point(45, 219);
+            this.noHistory_lbl.Name = "noHistory_lbl";
+            this.noHistory_lbl.Size = new System.Drawing.Size(166, 20);
+            this.noHistory_lbl.TabIndex = 36;
+            this.noHistory_lbl.Text = "There\'s no history yet";
+            // 
+            // noMemory_lbl
+            // 
+            this.noMemory_lbl.AutoSize = true;
+            this.noMemory_lbl.BackColor = System.Drawing.Color.Silver;
+            this.noMemory_lbl.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.noMemory_lbl.Location = new System.Drawing.Point(45, 219);
+            this.noMemory_lbl.Name = "noMemory_lbl";
+            this.noMemory_lbl.Size = new System.Drawing.Size(273, 20);
+            this.noMemory_lbl.TabIndex = 37;
+            this.noMemory_lbl.Text = "There\'s nothing save in the memory";
+            // 
+            // history_btn
+            // 
+            this.history_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.history_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.history_btn.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
+            this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_btn.Image = ((System.Drawing.Image)(resources.GetObject("history_btn.Image")));
+            this.history_btn.Location = new System.Drawing.Point(272, 12);
+            this.history_btn.Name = "history_btn";
+            this.history_btn.Size = new System.Drawing.Size(62, 51);
+            this.history_btn.TabIndex = 38;
+            this.history_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.history_btn.UseVisualStyleBackColor = true;
+            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
+            // 
+            // closeMem_btn
+            // 
+            this.closeMem_btn.BackColor = System.Drawing.Color.Silver;
+            this.closeMem_btn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.closeMem_btn.FlatAppearance.BorderSize = 2;
+            this.closeMem_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.closeMem_btn.ForeColor = System.Drawing.Color.Black;
+            this.closeMem_btn.Location = new System.Drawing.Point(12, 216);
+            this.closeMem_btn.Name = "closeMem_btn";
+            this.closeMem_btn.Size = new System.Drawing.Size(27, 23);
+            this.closeMem_btn.TabIndex = 39;
+            this.closeMem_btn.Text = "x";
+            this.closeMem_btn.UseVisualStyleBackColor = false;
+            this.closeMem_btn.Click += new System.EventHandler(this.closeMem_btn_Click);
+            // 
+            // closeHis_btn
+            // 
+            this.closeHis_btn.BackColor = System.Drawing.Color.Silver;
+            this.closeHis_btn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.closeHis_btn.FlatAppearance.BorderSize = 2;
+            this.closeHis_btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.closeHis_btn.ForeColor = System.Drawing.Color.Black;
+            this.closeHis_btn.Location = new System.Drawing.Point(12, 216);
+            this.closeHis_btn.Name = "closeHis_btn";
+            this.closeHis_btn.Size = new System.Drawing.Size(27, 23);
+            this.closeHis_btn.TabIndex = 40;
+            this.closeHis_btn.Text = "x";
+            this.closeHis_btn.UseVisualStyleBackColor = false;
+            this.closeHis_btn.Click += new System.EventHandler(this.closeHis_btn_Click);
+            // 
+            // clearHis_bx
+            // 
+            this.clearHis_bx.BackColor = System.Drawing.Color.Silver;
+            this.clearHis_bx.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.clearHis_bx.FlatAppearance.BorderSize = 2;
+            this.clearHis_bx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearHis_bx.ForeColor = System.Drawing.Color.Black;
+            this.clearHis_bx.Location = new System.Drawing.Point(247, 547);
+            this.clearHis_bx.Name = "clearHis_bx";
+            this.clearHis_bx.Size = new System.Drawing.Size(98, 23);
+            this.clearHis_bx.TabIndex = 41;
+            this.clearHis_bx.Text = "clear";
+            this.clearHis_bx.UseVisualStyleBackColor = false;
+            this.clearHis_bx.Click += new System.EventHandler(this.clearHis_bx_Click);
+            // 
+            // clearMem_bx
+            // 
+            this.clearMem_bx.BackColor = System.Drawing.Color.Silver;
+            this.clearMem_bx.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.clearMem_bx.FlatAppearance.BorderSize = 2;
+            this.clearMem_bx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearMem_bx.ForeColor = System.Drawing.Color.Black;
+            this.clearMem_bx.Location = new System.Drawing.Point(247, 547);
+            this.clearMem_bx.Name = "clearMem_bx";
+            this.clearMem_bx.Size = new System.Drawing.Size(98, 23);
+            this.clearMem_bx.TabIndex = 41;
+            this.clearMem_bx.Text = "clear";
+            this.clearMem_bx.UseVisualStyleBackColor = false;
+            this.clearMem_bx.Click += new System.EventHandler(this.clearMem_bx_Click);
             // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(357, 577);
+            this.ClientSize = new System.Drawing.Size(369, 582);
+            this.Controls.Add(this.noMemory_lbl);
+            this.Controls.Add(this.noHistory_lbl);
+            this.Controls.Add(this.clearMem_bx);
+            this.Controls.Add(this.clearHis_bx);
+            this.Controls.Add(this.closeHis_btn);
+            this.Controls.Add(this.closeMem_btn);
+            this.Controls.Add(this.history_btn);
+            this.Controls.Add(this.bx_history);
+            this.Controls.Add(this.bx_memory);
             this.Controls.Add(this.passValue_operation);
             this.Controls.Add(this.standard_lbl);
             this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
             this.Controls.Add(this.squared_btn);
             this.Controls.Add(this.cancel_btn);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.MShow);
+            this.Controls.Add(this.MSave);
+            this.Controls.Add(this.MSubtract);
+            this.Controls.Add(this.MAdd);
+            this.Controls.Add(this.MReall);
+            this.Controls.Add(this.MClear);
             this.Controls.Add(this.cancelAll_btn);
             this.Controls.Add(this.del_btn);
             this.Controls.Add(this.oper_divide);
@@ -675,14 +823,23 @@ namespace Calculator
         private System.Windows.Forms.Button sqrt_btn;
         private System.Windows.Forms.Button percent_btn;
         private System.Windows.Forms.Button over_btn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button MClear;
+        private System.Windows.Forms.Button MReall;
+        private System.Windows.Forms.Button MAdd;
+        private System.Windows.Forms.Button MSubtract;
+        private System.Windows.Forms.Button MSave;
+        private System.Windows.Forms.Button MShow;
         private System.Windows.Forms.Label standard_lbl;
         private System.Windows.Forms.TextBox passValue_operation;
+        private System.Windows.Forms.TextBox bx_memory;
+        private System.Windows.Forms.TextBox bx_history;
+        private System.Windows.Forms.Label noHistory_lbl;
+        private System.Windows.Forms.Label noMemory_lbl;
+        private System.Windows.Forms.Button history_btn;
+        private System.Windows.Forms.Button closeMem_btn;
+        private System.Windows.Forms.Button closeHis_btn;
+        private System.Windows.Forms.Button clearHis_bx;
+        private System.Windows.Forms.Button clearMem_bx;
     }
 }
 

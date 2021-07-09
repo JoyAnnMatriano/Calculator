@@ -14,12 +14,29 @@ namespace Calculator
     {
         Double num1;
         Double num2;
+        Double num3;
         String operationExecuted = "";
         bool isOperationExecuted = false;
-        
+
+        float storedNumber;
+
         public Calculator_box()
         {
             InitializeComponent();
+
+            bx_history.Visible = false;
+            noHistory_lbl.Visible = false;
+            closeHis_btn.Visible = false;
+            clearHis_bx.Visible = false;
+
+            bx_memory.Visible = false;
+            noMemory_lbl.Visible = false;
+            closeMem_btn.Visible = false;
+            clearMem_bx.Visible = false;
+
+            MClear.Enabled = false;
+            MReall.Enabled = false;
+            MShow.Enabled = false;
         }
         //==================================================================
         //---------Buttons (individual code)
@@ -38,6 +55,7 @@ namespace Calculator
         //......"="
         private void equals_Click(object sender, EventArgs e)
         {
+            num2 = Double.Parse(bx_output.Text);
             try
             {
                 switch (operationExecuted)
@@ -45,32 +63,39 @@ namespace Calculator
                     //add
                     case "+":
                         bx_output.Text = (num1 + Double.Parse(bx_output.Text)).ToString();
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //minus
                     case "-":
                         bx_output.Text = (num1 - Double.Parse(bx_output.Text)).ToString();
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //divide
                     case "÷":
                         bx_output.Text = (num1 / Double.Parse(bx_output.Text)).ToString();
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //multiply
                     case "x":
                         bx_output.Text = (num1 * Double.Parse(bx_output.Text)).ToString();
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //percent
                     case "%":
                         bx_output.Text = (num1 / 100).ToString();
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //squared
                     case "x²":
                         bx_output.Text = Math.Pow(num1, 2).ToString();
                         passValue_operation.Text = (num1 + "²");
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     //recirpocal
                     case "1 / x":
                         bx_output.Text = (1 / num1).ToString();
                         passValue_operation.Text = ("1/(" + num1 + ")");
+                        bx_history.AppendText("\r\n" + (num1 + operationExecuted) + num2 + ("\n" + "=") + bx_output.Text + "\n\n");
                         break;
                     default:
                         break;
@@ -128,8 +153,8 @@ namespace Calculator
             {
                 if (!bx_output.Text.Contains("."))
                     bx_output.Text = bx_output.Text + btn_num.Text;
-                if (!bx_output.Text.Contains("0"))
-                    bx_output.Text = "0" + btn_num.Text;
+                if (bx_output.Text == "0")
+                    bx_output.Text = bx_output.Text + btn_num.Text;
             }
             else if (bx_output.Text == "0")
             {
@@ -138,36 +163,6 @@ namespace Calculator
             }
             else
                 bx_output.Text = bx_output.Text + btn_num.Text;
-
-            decimal EndResult = 0;
-            decimal StoredMemory = 0;
-
-            //Memory Button
-            if (btn_num.Text == "MC") //Memory Clear
-            {
-                StoredMemory = 0;
-                return;
-            }
-            if (btn_num.Text == "MR") //Memory Recall
-            {
-                bx_output.Text = StoredMemory.ToString();
-                return;
-            }
-            if (btn_num.Text == "M+") //Memory Add
-            {
-                StoredMemory += EndResult;
-                return;
-            }
-            if (btn_num.Text == "M-") //Memory minus
-            {
-                StoredMemory -= EndResult;
-                return;
-            }
-            if (btn_num.Text == "MS") //Memory Store
-            {
-                StoredMemory -= EndResult;
-                return;
-            }
         }
         //Operations
         private void oper_click(object sender, EventArgs e)
@@ -195,7 +190,132 @@ namespace Calculator
                 bx_output.Text = "Math Error!";
             }
         }
-        //========================================================================================
-        //--------Private voids (made)
+
+        private void squared_btn_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = Math.Pow(Double.Parse(bx_output.Text), 2).ToString();
+            passValue_operation.Text = (Math.Sqrt(Double.Parse(bx_output.Text)) + "²");
+        }
+
+        private void over_btn_Click(object sender, EventArgs e)
+        {
+            num3 = Double.Parse(bx_output.Text);
+            bx_output.Text = (1 / Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = ("1/" + (num3));
+
+        }
+        //===========================================================================================end of operations
+
+        private void history_btn_Click(object sender, EventArgs e)
+        {
+            bx_history.Visible = true;
+            closeHis_btn.Visible = true;
+            noHistory_lbl.Visible = true;
+            clearHis_bx.Visible = true;
+
+            bx_memory.Visible = false;
+            closeMem_btn.Visible = false;
+            noMemory_lbl.Visible = false;
+            clearMem_bx.Visible = false;
+        }
+        //=======================================================start of memory button
+        private void MShow_Click(object sender, EventArgs e)
+        {
+            bx_memory.Visible = true;
+            closeMem_btn.Visible = true;
+            noMemory_lbl.Visible = true;
+            clearMem_bx.Visible = true;
+
+            bx_history.Visible = false;
+            closeHis_btn.Visible = false;
+            noHistory_lbl.Visible = false;
+            clearHis_bx.Visible = false;
+
+        }
+
+        private void MSave_Click(object sender, EventArgs e)
+        {
+            storedNumber = float.Parse(bx_output.Text);
+            MClear.Enabled = true;
+            MReall.Enabled = true;
+            MShow.Enabled = true;
+
+            bx_memory.AppendText( "\r\n" + bx_output.Text + "\n\n");
+
+        }
+
+        private void MSubtract_Click(object sender, EventArgs e)
+        {
+            storedNumber -= float.Parse(bx_output.Text);
+            bx_output.Text = string.Format("{0:N0}", storedNumber);
+        }
+
+        private void MAdd_Click(object sender, EventArgs e)
+        {
+            storedNumber += float.Parse(bx_output.Text);
+            bx_output.Text = string.Format("{0:N0}", storedNumber);
+        }
+
+        private void MReall_Click(object sender, EventArgs e)
+        {
+            bx_output.Text = string.Format("{0:N0}", storedNumber);
+        }
+
+        private void MClear_Click(object sender, EventArgs e)
+        {
+            bx_memory.Clear();
+        }
+
+        private void closeMem_btn_Click(object sender, EventArgs e)
+        {
+            bx_memory.Visible = false;
+            noMemory_lbl.Visible = false;
+            closeMem_btn.Visible = false;
+            clearMem_bx.Visible = false;
+        }
+
+        private void closeHis_btn_Click(object sender, EventArgs e)
+        {
+            bx_history.Visible = false;
+            noHistory_lbl.Visible = false;
+            closeHis_btn.Visible = false;
+            clearHis_bx.Visible = false;
+        }
+
+        private void clearHis_bx_Click(object sender, EventArgs e)
+        {
+            bx_history.Clear();
+            noHistory_lbl.Visible = true;
+        }
+
+        private void clearMem_bx_Click(object sender, EventArgs e)
+        {
+            bx_memory.Clear();
+            noMemory_lbl.Visible = true;
+        }
+        //==========================================================end of memory buttons
+        private void history_change(object sender, EventArgs e)
+        {
+            if (bx_history.Text.Length > 0)
+            {
+                noHistory_lbl.Visible = false;
+            }
+            else
+            {
+                noHistory_lbl.Visible = true;
+            }
+        }
+
+        private void memory_change(object sender, EventArgs e)
+        {
+            if (bx_memory.Text.Length > 0)
+            {
+                noMemory_lbl.Visible = false;
+            }
+            else
+            {
+                noMemory_lbl.Visible = true;
+            }
+        }
     }
 }
