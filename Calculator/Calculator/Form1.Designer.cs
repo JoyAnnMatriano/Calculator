@@ -50,7 +50,6 @@ namespace Calculator
             this.cancelAll_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.squared_btn = new System.Windows.Forms.Button();
-            this.passValue_operation = new System.Windows.Forms.Label();
             this.equals_btn = new System.Windows.Forms.Button();
             this.posneg_btn = new System.Windows.Forms.Button();
             this.sqrt_btn = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@ namespace Calculator
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.standard_lbl = new System.Windows.Forms.Label();
+            this.passValue_operation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_0
@@ -344,7 +344,6 @@ namespace Calculator
             this.bx_output.TabIndex = 1;
             this.bx_output.TabStop = false;
             this.bx_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bx_output.TextChanged += new System.EventHandler(this.bx_output_TextChanged);
             // 
             // del_btn
             // 
@@ -408,20 +407,6 @@ namespace Calculator
             this.squared_btn.TabIndex = 26;
             this.squared_btn.Text = "x²";
             this.squared_btn.UseVisualStyleBackColor = true;
-            this.squared_btn.Click += new System.EventHandler(this.squared_btn_Click);
-            // 
-            // passValue_operation
-            // 
-            this.passValue_operation.AutoSize = true;
-            this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passValue_operation.ForeColor = System.Drawing.SystemColors.Control;
-            this.passValue_operation.Location = new System.Drawing.Point(225, 53);
-            this.passValue_operation.Name = "passValue_operation";
-            this.passValue_operation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.passValue_operation.Size = new System.Drawing.Size(31, 37);
-            this.passValue_operation.TabIndex = 27;
-            this.passValue_operation.Text = "  ";
-            this.passValue_operation.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // equals_btn
             // 
@@ -593,7 +578,6 @@ namespace Calculator
             this.button7.TabIndex = 24;
             this.button7.Text = "M🢓";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.show_hist);
             // 
             // standard_lbl
             // 
@@ -606,14 +590,21 @@ namespace Calculator
             this.standard_lbl.TabIndex = 33;
             this.standard_lbl.Text = "Standard";
             // 
+            // passValue_operation
+            // 
+            this.passValue_operation.Location = new System.Drawing.Point(234, 64);
+            this.passValue_operation.Name = "passValue_operation";
+            this.passValue_operation.Size = new System.Drawing.Size(100, 23);
+            this.passValue_operation.TabIndex = 34;
+            // 
             // Calculator_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(357, 577);
-            this.Controls.Add(this.standard_lbl);
             this.Controls.Add(this.passValue_operation);
+            this.Controls.Add(this.standard_lbl);
             this.Controls.Add(this.over_btn);
             this.Controls.Add(this.equals_btn);
             this.Controls.Add(this.squared_btn);
@@ -648,7 +639,6 @@ namespace Calculator
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator_box";
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.Calculator_box_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,7 +666,6 @@ namespace Calculator
         private System.Windows.Forms.Button cancelAll_btn;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button squared_btn;
-        private System.Windows.Forms.Label passValue_operation;
         private System.Windows.Forms.Button equals_btn;
         private System.Windows.Forms.Button posneg_btn;
         private System.Windows.Forms.Button sqrt_btn;
@@ -689,6 +678,7 @@ namespace Calculator
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label standard_lbl;
+        private System.Windows.Forms.TextBox passValue_operation;
     }
 }
 

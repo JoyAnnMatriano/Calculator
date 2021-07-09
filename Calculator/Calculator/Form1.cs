@@ -12,7 +12,8 @@ namespace Calculator
 {
     public partial class Calculator_box : Form
     {
-        Double num1 = 0;
+        Double num1;
+        Double num2;
         String operationExecuted = "";
         bool isOperationExecuted = false;
         
@@ -27,24 +28,45 @@ namespace Calculator
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             bx_output.Text = "0";
-            passValue_operation.Text = "";
-            num1 = 0;
-            del_btn.Enabled = true;
+            passValue_operation.Text = " ";
         }
         //......"CE"
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Clear();
-            del_btn.Enabled = true;
         }
         //......"="
         private void equals_Click(object sender, EventArgs e)
         {
             try
             {
-                switch_ops();
-                num1 = Double.Parse(bx_output.Text);
-                passValue_operation.Text = "";
+                switch (operationExecuted)
+                {
+                    //add
+                    case "+":
+                        bx_output.Text = (num1 + Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //minus
+                    case "-":
+                        bx_output.Text = (num1 - Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //divide
+                    case "÷":
+                        bx_output.Text = (num1 / Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //multiply
+                    case "*":
+                        bx_output.Text = (num1 * Double.Parse(bx_output.Text)).ToString();
+                        break;
+                    //squared
+                    case "x²":
+                        bx_output.Text = (num1 * num2).ToString();
+                        break;
+                    default:
+                        break;
+                }
+                num2 = Double.Parse(bx_output.Text);
+                operationExecuted = " ";
             }
             catch
             {
@@ -66,6 +88,7 @@ namespace Calculator
         {
             passValue_operation.Text = "0";
             bx_output.Text = "0";
+            num1 = 0;
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
@@ -143,6 +166,7 @@ namespace Calculator
                 if (num1 != 0)
                 {
                     equals_btn.PerformClick();
+                    num1 = Double.Parse(bx_output.Text);
                     operationExecuted = b_Oper.Text;
                     passValue_operation.Text = num1 + " " + operationExecuted;
                     bx_output.Text = "";
@@ -150,72 +174,16 @@ namespace Calculator
                 else
                 {
                     operationExecuted = b_Oper.Text;
-                    num1 = Double.Parse(bx_output.Text);
-                    passValue_operation.Text = bx_output + "" + b_Oper.Text;
+                    passValue_operation.Text = bx_output.Text + "" + b_Oper.Text;
                     bx_output.Text = "";
                 }
             }
             catch
             {
                 bx_output.Text = "Math Error!";
-                del_btn.Enabled = false;
             }
         }
         //========================================================================================
         //--------Private voids (made)
-        private void switch_ops()
-        {
-            try
-            {
-                switch (operationExecuted)
-                {
-                    //add
-                    case "+":
-                        bx_output.Text = (num1 + Double.Parse(bx_output.Text)).ToString();
-                        break;
-                    //minus
-                    case "-":
-                        bx_output.Text = (num1 - Double.Parse(bx_output.Text)).ToString();
-                        break;
-                    //divide
-                    case "÷":
-                        bx_output.Text = (num1 / Double.Parse(bx_output.Text)).ToString();
-                        break;
-                    //multiply
-                    case "*":
-                        bx_output.Text = (num1 * Double.Parse(bx_output.Text)).ToString();
-                        break;
-                    //squared
-                    case "x²":
-                        bx_output.Text = (num1 * num1).ToString();
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch
-            {
-                bx_output.Text = "Math Error!";
-
-            }
-        }
-        private void show_hist(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Calculator_box_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bx_output_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void squared_btn_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
