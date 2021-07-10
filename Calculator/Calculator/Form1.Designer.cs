@@ -628,7 +628,6 @@ namespace Calculator
             this.bx_memory.Size = new System.Drawing.Size(370, 374);
             this.bx_memory.TabIndex = 35;
             this.bx_memory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bx_memory.TextChanged += new System.EventHandler(this.memory_change);
             // 
             // bx_history
             // 
@@ -641,7 +640,6 @@ namespace Calculator
             this.bx_history.Size = new System.Drawing.Size(370, 372);
             this.bx_history.TabIndex = 35;
             this.bx_history.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bx_history.TextChanged += new System.EventHandler(this.history_change);
             // 
             // noHistory_lbl
             // 
@@ -672,7 +670,7 @@ namespace Calculator
             this.history_btn.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
             this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_btn.Image = ((System.Drawing.Image)(resources.GetObject("history_btn.Image")));
-            this.history_btn.Location = new System.Drawing.Point(272, 12);
+            this.history_btn.Location = new System.Drawing.Point(283, -2);
             this.history_btn.Name = "history_btn";
             this.history_btn.Size = new System.Drawing.Size(62, 51);
             this.history_btn.TabIndex = 38;

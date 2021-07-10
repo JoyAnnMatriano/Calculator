@@ -182,6 +182,7 @@ namespace Calculator
         {
             bx_output.Text = Math.Pow(Double.Parse(bx_output.Text), 2).ToString();
             passValue_operation.Text = (Math.Sqrt(Double.Parse(bx_output.Text)) + "²");
+            bx_history.AppendText("\r\n" + passValue_operation.Text + ("\n" + "=") + bx_output.Text + "\n\n");
         }
 
         private void over_btn_Click(object sender, EventArgs e)
@@ -189,6 +190,7 @@ namespace Calculator
             def.num3 = Double.Parse(bx_output.Text);
             bx_output.Text = (1 / Double.Parse(bx_output.Text)).ToString();
             passValue_operation.Text = ("1/" + (def.num3));
+            bx_history.AppendText("\r\n" + passValue_operation.Text + ("\n" + "=") + bx_output.Text + "\n\n");
 
         }
         //===========================================================================================end of operations
@@ -197,7 +199,7 @@ namespace Calculator
         {
             bx_history.Visible = true;
             closeHis_btn.Visible = true;
-            noHistory_lbl.Visible = true;
+            noHistory_lbl.Visible = false;
             clearHis_bx.Visible = true;
 
             Memorydefault();
@@ -207,7 +209,7 @@ namespace Calculator
         {
             bx_memory.Visible = true;
             closeMem_btn.Visible = true;
-            noMemory_lbl.Visible = true;
+            noMemory_lbl.Visible = false;
             clearMem_bx.Visible = true;
 
             Historydefault();
@@ -267,30 +269,6 @@ namespace Calculator
         {
             bx_memory.Clear();
             noMemory_lbl.Visible = true;
-        }
-        //==========================================================end of memory buttons
-        private void history_change(object sender, EventArgs e)
-        {
-            if (bx_history.Text.Length > 0)
-            {
-                noHistory_lbl.Visible = false;
-            }
-            else
-            {
-                noHistory_lbl.Visible = true;
-            }
-        }
-
-        private void memory_change(object sender, EventArgs e)
-        {
-            if (bx_memory.Text.Length > 0)
-            {
-                noMemory_lbl.Visible = false;
-            }
-            else
-            {
-                noMemory_lbl.Visible = true;
-            }
         }
 
         //======private voids (made)
