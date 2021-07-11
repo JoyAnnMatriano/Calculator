@@ -343,6 +343,7 @@ namespace Calculator
             // bx_output
             // 
             this.bx_output.BackColor = System.Drawing.Color.CadetBlue;
+            this.bx_output.Cursor = System.Windows.Forms.Cursors.Default;
             this.bx_output.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bx_output.ForeColor = System.Drawing.Color.White;
             this.bx_output.Location = new System.Drawing.Point(28, 93);
@@ -607,6 +608,7 @@ namespace Calculator
             // 
             this.passValue_operation.BackColor = System.Drawing.Color.CadetBlue;
             this.passValue_operation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passValue_operation.Cursor = System.Windows.Forms.Cursors.Default;
             this.passValue_operation.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passValue_operation.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.passValue_operation.Location = new System.Drawing.Point(28, 55);
@@ -620,6 +622,7 @@ namespace Calculator
             // bx_memory
             // 
             this.bx_memory.BackColor = System.Drawing.Color.Silver;
+            this.bx_memory.Cursor = System.Windows.Forms.Cursors.Default;
             this.bx_memory.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bx_memory.Location = new System.Drawing.Point(-1, 210);
             this.bx_memory.Multiline = true;
@@ -632,8 +635,9 @@ namespace Calculator
             // bx_history
             // 
             this.bx_history.BackColor = System.Drawing.Color.Silver;
+            this.bx_history.Cursor = System.Windows.Forms.Cursors.Default;
             this.bx_history.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bx_history.Location = new System.Drawing.Point(-1, 210);
+            this.bx_history.Location = new System.Drawing.Point(-1, 212);
             this.bx_history.Multiline = true;
             this.bx_history.Name = "bx_history";
             this.bx_history.ReadOnly = true;
