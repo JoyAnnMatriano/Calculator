@@ -272,12 +272,12 @@ namespace Calculator
         }
 
         //======private voids (made)
-        public void SaveHistory()
+        private void SaveHistory()
         {
             bx_history.AppendText("\r\n" + (def.num1 + def.operationExecuted) + def.num2 + ("\n" + "=") + bx_output.Text + "\n\n");
         }
 
-        public void Memorydefault()
+        private void Memorydefault()
         {
             bx_memory.Visible = false;
             noMemory_lbl.Visible = false;
@@ -285,12 +285,14 @@ namespace Calculator
             clearMem_bx.Visible = false;
         }
 
-        public void Historydefault()
+        private void Historydefault()
         {
             bx_history.Visible = false;
             noHistory_lbl.Visible = false;
             closeHis_btn.Visible = false;
             clearHis_bx.Visible = false;
         }
+
+        
     }
 }
