@@ -301,25 +301,25 @@ namespace Calculator
         private void Add()
         {
             bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
-            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+            showValue_OP();
         }
 
         private void Minus()
         {
             bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
-            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+            showValue_OP();
         }
 
         private void Divide()
         {
             bx_output.Text = (def.num1 / Double.Parse(bx_output.Text)).ToString();
-            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+            showValue_OP();
         }
 
         private void Multiply()
         {
             bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
-            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+            showValue_OP();
         }
 
         private void Percent() //kulang pa sa code
@@ -337,6 +337,11 @@ namespace Calculator
         {
             bx_output.Text = (1 / def.num1).ToString();
             passValue_operation.Text = ("1/(" + def.num1 + ")");
+        }
+
+        private void showValue_OP()
+        {
+            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
         }
     }
 }
