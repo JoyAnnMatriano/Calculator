@@ -129,6 +129,7 @@ namespace Calculator
         private void btn_sqrt(object sender, EventArgs e)
         {
             bx_output.Text = Math.Sqrt(Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = ("sqrt("+Math.Pow(Double.Parse(bx_output.Text),2)+")");
             def.num1 = Math.Sqrt(Double.Parse(bx_output.Text));
         }
         //==================================================================
