@@ -24,6 +24,8 @@ namespace Calculator
             MClear.Enabled = false;
             MReall.Enabled = false;
             MShow.Enabled = false;
+
+            del_btn.Enabled = true;
         }
         //==================================================================
         //---------Buttons (individual code)
@@ -39,6 +41,7 @@ namespace Calculator
         {
             bx_output.Clear();
             passValue_operation.Clear();
+            del_btn.Enabled = true;
         }
         //......"="
         private void equals_Click(object sender, EventArgs e)
@@ -92,6 +95,7 @@ namespace Calculator
             catch
             {
                 bx_output.Text = "Math Error!";
+                del_btn.Enabled = false;
             }
         }
         //......"←"
@@ -174,6 +178,7 @@ namespace Calculator
             catch
             {
                 bx_output.Text = "Math Error!";
+                del_btn.Enabled = false;
             }
         }
 
