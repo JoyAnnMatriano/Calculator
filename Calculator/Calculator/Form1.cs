@@ -38,6 +38,7 @@ namespace Calculator
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Clear();
+            passValue_operation.Clear();
         }
         //......"="
         private void equals_Click(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace Calculator
                         break;
                     //minus
                     case "-":
-                        bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
+                        Minus();
                         SaveHistory();
                         break;
                     //divide
                     case "÷":
-                        bx_output.Text = (def.num1 / Double.Parse(bx_output.Text)).ToString();
+                        Divide();
                         SaveHistory();
                         break;
                     //multiply
@@ -296,6 +297,18 @@ namespace Calculator
         private void Add()
         {
             bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+        }
+
+        private void Minus()
+        {
+            bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+        }
+
+        private void Divide()
+        {
+            bx_output.Text = (def.num1 / Double.Parse(bx_output.Text)).ToString();
             passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
         }
 
