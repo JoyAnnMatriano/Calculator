@@ -49,7 +49,7 @@ namespace Calculator
                 {
                     //add
                     case "+":
-                        bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
+                        Add();
                         SaveHistory();
                         break;
                     //minus
@@ -291,6 +291,12 @@ namespace Calculator
             noHistory_lbl.Visible = false;
             closeHis_btn.Visible = false;
             clearHis_bx.Visible = false;
+        }
+
+        private void Add()
+        {
+            bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
         }
 
         
