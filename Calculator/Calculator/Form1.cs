@@ -18,8 +18,8 @@ namespace Calculator
         {
             InitializeComponent();
 
-           Historydefault();
-           Memorydefault();
+            Historydefault();
+            Memorydefault();
 
             MClear.Enabled = false;
             MReall.Enabled = false;
@@ -43,7 +43,7 @@ namespace Calculator
         //......"="
         private void equals_Click(object sender, EventArgs e)
         {
-           def.num2 = Double.Parse(bx_output.Text);
+            def.num2 = Double.Parse(bx_output.Text);
             try
             {
                 switch (def.operationExecuted)
@@ -65,24 +65,22 @@ namespace Calculator
                         break;
                     //multiply
                     case "x":
-                        bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
+                        Multiply();
                         SaveHistory();
                         break;
                     //percent
-                    case "%":
-                        bx_output.Text = (def.num1 / 100).ToString();
+                    case "%"://to improve pa, kulang din sa code
+                        Percent();
                         SaveHistory();
                         break;
                     //squared
                     case "x²":
-                        bx_output.Text = Math.Pow(def.num1, 2).ToString();
-                        passValue_operation.Text = (def.num1 + "²");
+                        Squared();
                         SaveHistory();
                         break;
                     //recirpocal
                     case "1 / x":
-                        bx_output.Text = (1 / def.num1).ToString();
-                        passValue_operation.Text = ("1/(" + def.num1 + ")");
+                        Reciprocal();
                         SaveHistory();
                         break;
                     default:
@@ -161,7 +159,7 @@ namespace Calculator
                 if (def.num1 != 0)
                 {
                     equals_btn.PerformClick();
-                   def.operationExecuted = b_Oper.Text;
+                    def.operationExecuted = b_Oper.Text;
                     passValue_operation.Text = def.num1 + " " + def.operationExecuted;
                     bx_output.Text = "";
                 }
@@ -224,7 +222,7 @@ namespace Calculator
             MReall.Enabled = true;
             MShow.Enabled = true;
 
-            bx_memory.AppendText( "\r\n" + bx_output.Text + "\n\n");
+            bx_memory.AppendText("\r\n" + bx_output.Text + "\n\n");
 
         }
 
@@ -294,6 +292,7 @@ namespace Calculator
             clearHis_bx.Visible = false;
         }
 
+        //Operations
         private void Add()
         {
             bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
@@ -312,6 +311,27 @@ namespace Calculator
             passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
         }
 
-        
+        private void Multiply()
+        {
+            bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
+            passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
+        }
+
+        private void Percent() //kulang pa sa code
+        {
+            bx_output.Text = (def.num1 / 100).ToString();
+        }
+
+        private void Squared()
+        {
+            bx_output.Text = Math.Pow(def.num1, 2).ToString();
+            passValue_operation.Text = (def.num1 + "²");
+        }
+
+        private void Reciprocal()
+        {
+            bx_output.Text = (1 / def.num1).ToString();
+            passValue_operation.Text = ("1/(" + def.num1 + ")");
+        }
     }
 }
