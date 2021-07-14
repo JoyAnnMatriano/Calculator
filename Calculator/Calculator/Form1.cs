@@ -54,36 +54,43 @@ namespace Calculator
                     //add
                     case "+":
                         Add();
+                        showValue_OP();
                         SaveHistory();
                         break;
                     //minus
                     case "-":
                         Minus();
+                        showValue_OP();
                         SaveHistory();
                         break;
                     //divide
                     case "÷":
                         Divide();
+                        showValue_OP();
                         SaveHistory();
                         break;
                     //multiply
                     case "x":
                         Multiply();
+                        showValue_OP();
                         SaveHistory();
                         break;
                     //percent
                     case "%"://to improve pa, kulang din sa code
                         Percent();
+                        showValue_OP();
                         SaveHistory();
                         break;
                     //squared
                     case "x²":
                         Squared();
+                        passValue_operation.Text = (def.num1 + "²");
                         SaveHistory();
                         break;
                     //recirpocal
                     case "1 / x":
                         Reciprocal();
+                        passValue_operation.Text = ("1/(" + def.num1 + ")");
                         SaveHistory();
                         break;
                     default:
@@ -302,25 +309,21 @@ namespace Calculator
         private void Add()
         {
             bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
-            showValue_OP();
         }
 
         private void Minus()
         {
             bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
-            showValue_OP();
         }
 
         private void Divide()
         {
             bx_output.Text = (def.num1 / Double.Parse(bx_output.Text)).ToString();
-            showValue_OP();
         }
 
         private void Multiply()
         {
             bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
-            showValue_OP();
         }
 
         private void Percent() //kulang pa sa code
@@ -331,13 +334,11 @@ namespace Calculator
         private void Squared()
         {
             bx_output.Text = Math.Pow(def.num1, 2).ToString();
-            passValue_operation.Text = (def.num1 + "²");
         }
 
         private void Reciprocal()
         {
             bx_output.Text = (1 / def.num1).ToString();
-            passValue_operation.Text = ("1/(" + def.num1 + ")");
         }
 
         private void showValue_OP()
