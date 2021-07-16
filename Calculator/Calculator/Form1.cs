@@ -306,11 +306,10 @@ namespace Calculator
         }
 
         //Operations
-        private void Add()
+        public void Add()
         {
             bx_output.Text = (def.num1 + Double.Parse(bx_output.Text)).ToString();
         }
-
         private void Minus()
         {
             bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
