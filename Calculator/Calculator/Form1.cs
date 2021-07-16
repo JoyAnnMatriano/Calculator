@@ -35,12 +35,13 @@ namespace Calculator
         {
             bx_output.Text = "0";
             passValue_operation.Text = " ";
+            del_btn.Enabled = true;
         }
         //......"CE"
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             bx_output.Clear();
-            passValue_operation.Clear();
+            passValue_operation.Text = " ";
             del_btn.Enabled = true;
         }
         //......"="
@@ -325,9 +326,9 @@ namespace Calculator
             bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
         }
 
-        private void Percent() //kulang pa sa code
+        private void Percent()
         {
-            bx_output.Text = (def.num1 / 100).ToString();
+            bx_output.Text = ((def.num1 * def.num2) / 100).ToString();
         }
 
         private void Squared()
