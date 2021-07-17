@@ -10,10 +10,8 @@ namespace Calculator
     {
         public Double num1;
         public Double num2;
-        public Double num3;
         public String operationExecuted = "";
         public bool isOperationExecuted = false;
-
         public float storedNumber;
     }
 }

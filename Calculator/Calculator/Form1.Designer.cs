@@ -676,7 +676,7 @@ namespace Calculator
             this.history_btn.Image = ((System.Drawing.Image)(resources.GetObject("history_btn.Image")));
             this.history_btn.Location = new System.Drawing.Point(283, -2);
             this.history_btn.Name = "history_btn";
-            this.history_btn.Size = new System.Drawing.Size(62, 51);
+            this.history_btn.Size = new System.Drawing.Size(60, 51);
             this.history_btn.TabIndex = 38;
             this.history_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.history_btn.UseVisualStyleBackColor = true;
@@ -747,7 +747,7 @@ namespace Calculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(369, 582);
+            this.ClientSize = new System.Drawing.Size(367, 582);
             this.Controls.Add(this.noMemory_lbl);
             this.Controls.Add(this.noHistory_lbl);
             this.Controls.Add(this.clearMem_bx);

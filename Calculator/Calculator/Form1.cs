@@ -13,7 +13,6 @@ namespace Calculator
     public partial class Calculator_box : Form
     {
         numDefault def = new numDefault();
-
         public Calculator_box()
         {
             InitializeComponent();
@@ -128,7 +127,6 @@ namespace Calculator
         {
             bx_output.Text = "0";
         }
-
         private void posneg_btn_Click(object sender, EventArgs e)
         {
             bx_output.Text = (-1 * Double.Parse(bx_output.Text)).ToString();
@@ -145,7 +143,6 @@ namespace Calculator
         //Number Buttons
         private void btn_num_Click(object sender, EventArgs e)
         {
-
             Button btn_num = (Button)sender;
 
             if (btn_num.Text == ".")
@@ -190,24 +187,20 @@ namespace Calculator
                 del_btn.Enabled = false;
             }
         }
-
         private void squared_btn_Click(object sender, EventArgs e)
         {
             bx_output.Text = Math.Pow(Double.Parse(bx_output.Text), 2).ToString();
             passValue_operation.Text = (Math.Sqrt(Double.Parse(bx_output.Text)) + "²");
             bx_history.AppendText("\r\n" + passValue_operation.Text + ("\n" + "=") + bx_output.Text + "\n\n");
         }
-
         private void over_btn_Click(object sender, EventArgs e)
         {
-            def.num3 = Double.Parse(bx_output.Text);
+            def.num2 = Double.Parse(bx_output.Text);
             bx_output.Text = (1 / Double.Parse(bx_output.Text)).ToString();
-            passValue_operation.Text = ("1/" + (def.num3));
+            passValue_operation.Text = ("1/" + (def.num2));
             bx_history.AppendText("\r\n" + passValue_operation.Text + ("\n" + "=") + bx_output.Text + "\n\n");
-
         }
         //===========================================================================================end of operations
-
         private void history_btn_Click(object sender, EventArgs e)
         {
             bx_history.Visible = true;
@@ -226,7 +219,6 @@ namespace Calculator
             clearMem_bx.Visible = true;
 
             Historydefault();
-
         }
 
         private void MSave_Click(object sender, EventArgs e)
@@ -239,57 +231,47 @@ namespace Calculator
             bx_memory.AppendText("\r\n" + bx_output.Text + "\n\n");
 
         }
-
         private void MSubtract_Click(object sender, EventArgs e)
         {
             def.storedNumber -= float.Parse(bx_output.Text);
             bx_output.Text = string.Format("{0:N0}", def.storedNumber);
         }
-
         private void MAdd_Click(object sender, EventArgs e)
         {
             def.storedNumber += float.Parse(bx_output.Text);
             bx_output.Text = string.Format("{0:N0}", def.storedNumber);
         }
-
         private void MReall_Click(object sender, EventArgs e)
         {
             bx_output.Text = string.Format("{0:N0}", def.storedNumber);
         }
-
         private void MClear_Click(object sender, EventArgs e)
         {
             bx_memory.Clear();
         }
-
         private void closeMem_btn_Click(object sender, EventArgs e)
         {
             Memorydefault();
         }
-
         private void closeHis_btn_Click(object sender, EventArgs e)
         {
             Historydefault();
         }
-
         private void clearHis_bx_Click(object sender, EventArgs e)
         {
             bx_history.Clear();
             noHistory_lbl.Visible = true;
         }
-
         private void clearMem_bx_Click(object sender, EventArgs e)
         {
             bx_memory.Clear();
             noMemory_lbl.Visible = true;
         }
-
         //======private voids (made)
         private void SaveHistory()
         {
             bx_history.AppendText("\r\n" + (def.num1 + def.operationExecuted) + def.num2 + ("\n" + "=") + bx_output.Text + "\n\n");
         }
-
         private void Memorydefault()
         {
             bx_memory.Visible = false;
@@ -297,7 +279,6 @@ namespace Calculator
             closeMem_btn.Visible = false;
             clearMem_bx.Visible = false;
         }
-
         private void Historydefault()
         {
             bx_history.Visible = false;
@@ -305,7 +286,6 @@ namespace Calculator
             closeHis_btn.Visible = false;
             clearHis_bx.Visible = false;
         }
-
         //Operations
         public void Add()
         {
@@ -315,32 +295,26 @@ namespace Calculator
         {
             bx_output.Text = (def.num1 - Double.Parse(bx_output.Text)).ToString();
         }
-
         private void Divide()
         {
             bx_output.Text = (def.num1 / Double.Parse(bx_output.Text)).ToString();
         }
-
         private void Multiply()
         {
             bx_output.Text = (def.num1 * Double.Parse(bx_output.Text)).ToString();
         }
-
         private void Percent()
         {
             bx_output.Text = ((def.num1 * def.num2) / 100).ToString();
         }
-
         private void Squared()
         {
             bx_output.Text = Math.Pow(def.num1, 2).ToString();
         }
-
         private void Reciprocal()
         {
             bx_output.Text = (1 / def.num1).ToString();
         }
-
         private void showValue_OP()
         {
             passValue_operation.Text = (def.num1 + def.operationExecuted + def.num2);
