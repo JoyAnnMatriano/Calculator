@@ -70,8 +70,10 @@ namespace Calculator
             this.history_btn = new System.Windows.Forms.Button();
             this.closeMem_btn = new System.Windows.Forms.Button();
             this.closeHis_btn = new System.Windows.Forms.Button();
-            this.clearHis_bx = new System.Windows.Forms.Button();
-            this.clearMem_bx = new System.Windows.Forms.Button();
+            this.clearMem_bx = new System.Windows.Forms.PictureBox();
+            this.clearHis_bx = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.clearMem_bx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clearHis_bx)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_0
@@ -637,7 +639,7 @@ namespace Calculator
             this.bx_history.BackColor = System.Drawing.Color.Silver;
             this.bx_history.Cursor = System.Windows.Forms.Cursors.Default;
             this.bx_history.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bx_history.Location = new System.Drawing.Point(-1, 212);
+            this.bx_history.Location = new System.Drawing.Point(-1, 209);
             this.bx_history.Multiline = true;
             this.bx_history.Name = "bx_history";
             this.bx_history.ReadOnly = true;
@@ -712,35 +714,29 @@ namespace Calculator
             this.closeHis_btn.UseVisualStyleBackColor = false;
             this.closeHis_btn.Click += new System.EventHandler(this.closeHis_btn_Click);
             // 
-            // clearHis_bx
-            // 
-            this.clearHis_bx.BackColor = System.Drawing.Color.Silver;
-            this.clearHis_bx.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.clearHis_bx.FlatAppearance.BorderSize = 2;
-            this.clearHis_bx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearHis_bx.ForeColor = System.Drawing.Color.Black;
-            this.clearHis_bx.Location = new System.Drawing.Point(247, 547);
-            this.clearHis_bx.Name = "clearHis_bx";
-            this.clearHis_bx.Size = new System.Drawing.Size(98, 23);
-            this.clearHis_bx.TabIndex = 41;
-            this.clearHis_bx.Text = "clear";
-            this.clearHis_bx.UseVisualStyleBackColor = false;
-            this.clearHis_bx.Click += new System.EventHandler(this.clearHis_bx_Click);
-            // 
             // clearMem_bx
             // 
             this.clearMem_bx.BackColor = System.Drawing.Color.Silver;
-            this.clearMem_bx.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.clearMem_bx.FlatAppearance.BorderSize = 2;
-            this.clearMem_bx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearMem_bx.ForeColor = System.Drawing.Color.Black;
-            this.clearMem_bx.Location = new System.Drawing.Point(247, 547);
+            this.clearMem_bx.Image = global::Calculator.Properties.Resources.img_510054;
+            this.clearMem_bx.Location = new System.Drawing.Point(326, 529);
             this.clearMem_bx.Name = "clearMem_bx";
-            this.clearMem_bx.Size = new System.Drawing.Size(98, 23);
-            this.clearMem_bx.TabIndex = 41;
-            this.clearMem_bx.Text = "clear";
-            this.clearMem_bx.UseVisualStyleBackColor = false;
+            this.clearMem_bx.Size = new System.Drawing.Size(29, 41);
+            this.clearMem_bx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clearMem_bx.TabIndex = 42;
+            this.clearMem_bx.TabStop = false;
             this.clearMem_bx.Click += new System.EventHandler(this.clearMem_bx_Click);
+            // 
+            // clearHis_bx
+            // 
+            this.clearHis_bx.BackColor = System.Drawing.Color.Silver;
+            this.clearHis_bx.Image = global::Calculator.Properties.Resources.img_510054;
+            this.clearHis_bx.Location = new System.Drawing.Point(326, 529);
+            this.clearHis_bx.Name = "clearHis_bx";
+            this.clearHis_bx.Size = new System.Drawing.Size(29, 41);
+            this.clearHis_bx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clearHis_bx.TabIndex = 42;
+            this.clearHis_bx.TabStop = false;
+            this.clearHis_bx.Click += new System.EventHandler(this.clearHis_bx_Click);
             // 
             // Calculator_box
             // 
@@ -748,10 +744,10 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(367, 582);
+            this.Controls.Add(this.clearHis_bx);
+            this.Controls.Add(this.clearMem_bx);
             this.Controls.Add(this.noMemory_lbl);
             this.Controls.Add(this.noHistory_lbl);
-            this.Controls.Add(this.clearMem_bx);
-            this.Controls.Add(this.clearHis_bx);
             this.Controls.Add(this.closeHis_btn);
             this.Controls.Add(this.closeMem_btn);
             this.Controls.Add(this.history_btn);
@@ -793,6 +789,8 @@ namespace Calculator
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calculator_box";
             this.Text = "Calculator";
+            ((System.ComponentModel.ISupportInitialize)(this.clearMem_bx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clearHis_bx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -840,8 +838,8 @@ namespace Calculator
         private System.Windows.Forms.Button history_btn;
         private System.Windows.Forms.Button closeMem_btn;
         private System.Windows.Forms.Button closeHis_btn;
-        private System.Windows.Forms.Button clearHis_bx;
-        private System.Windows.Forms.Button clearMem_bx;
+        private System.Windows.Forms.PictureBox clearMem_bx;
+        private System.Windows.Forms.PictureBox clearHis_bx;
     }
 }
 
