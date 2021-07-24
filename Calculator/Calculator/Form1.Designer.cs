@@ -676,7 +676,7 @@ namespace Calculator
             this.history_btn.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
             this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_btn.Image = ((System.Drawing.Image)(resources.GetObject("history_btn.Image")));
-            this.history_btn.Location = new System.Drawing.Point(283, -2);
+            this.history_btn.Location = new System.Drawing.Point(295, -2);
             this.history_btn.Name = "history_btn";
             this.history_btn.Size = new System.Drawing.Size(60, 51);
             this.history_btn.TabIndex = 38;
